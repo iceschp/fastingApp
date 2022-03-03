@@ -13,6 +13,7 @@ struct ContentView: View {
         Text("Second line text")
             .padding()
         print("Esus Ice,Esus jui")
+        print("Milk is so cute")
     }
 }
 
