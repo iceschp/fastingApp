@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("This is the first commit")
+        Text("This is the first commit and test commit")
             .padding()
     }
 }
