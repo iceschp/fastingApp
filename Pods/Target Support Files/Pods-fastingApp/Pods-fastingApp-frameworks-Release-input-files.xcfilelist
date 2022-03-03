@@ -1,0 +1,10 @@
+${PODS_ROOT}/Target Support Files/Pods-fastingApp/Pods-fastingApp-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/Charts/Charts.framework
+${BUILT_PRODUCTS_DIR}/Introspect/Introspect.framework
+${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
+${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework
+${BUILT_PRODUCTS_DIR}/QrcodeBuilder/QrcodeBuilder.framework
+${BUILT_PRODUCTS_DIR}/SwiftColor/SwiftColor.framework
+${BUILT_PRODUCTS_DIR}/SwiftGifOrigin/SwiftGifOrigin.framework
+${BUILT_PRODUCTS_DIR}/SwiftUIRefresh/SwiftUIRefresh.framework

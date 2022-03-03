@@ -1,0 +1,55 @@
+PODS:
+  - Alamofire (5.5.0)
+  - Charts (3.6.0):
+    - Charts/Core (= 3.6.0)
+  - Charts/Core (3.6.0)
+  - Introspect (0.1.4)
+  - Kingfisher (5.15.8):
+    - Kingfisher/Core (= 5.15.8)
+  - Kingfisher/Core (5.15.8)
+  - Kingfisher/SwiftUI (5.15.8):
+    - Kingfisher/Core
+  - QrcodeBuilder (1.0.1)
+  - QRCodeReader.swift (10.1.0)
+  - SwiftColor (1.6.0)
+  - SwiftGifOrigin (1.7.0)
+  - SwiftUIRefresh (0.0.3):
+    - Introspect (~> 0.1.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.2)
+  - Charts (~> 3.5)
+  - Kingfisher (~> 5.14)
+  - Kingfisher/SwiftUI
+  - QrcodeBuilder
+  - QRCodeReader.swift (~> 10.1)
+  - SwiftColor
+  - SwiftGifOrigin (~> 1.7.0)
+  - SwiftUIRefresh
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Charts
+    - Introspect
+    - Kingfisher
+    - QrcodeBuilder
+    - QRCodeReader.swift
+    - SwiftColor
+    - SwiftGifOrigin
+    - SwiftUIRefresh
+
+SPEC CHECKSUMS:
+  Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
+  Introspect: b62c4dd2063072327c21d618ef2bedc3c87bc366
+  Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
+  QrcodeBuilder: 542404d402bee839245eddb16c23b749fd15b5a4
+  QRCodeReader.swift: 373a389fe9a22d513c879a32a6f647c58f4ef572
+  SwiftColor: 3db8a6a1ffb4df61f074a0643d620bf91876c267
+  SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
+  SwiftUIRefresh: ca6ae2718d25aad5dd68bbf5d2ae36ef6ade98bf
+
+PODFILE CHECKSUM: 318baaa2c73f3a9275a63020d3b240edbb8b1029
+
+COCOAPODS: 1.11.2
