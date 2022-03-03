@@ -12,6 +12,7 @@ struct ContentView: View {
         Text("This is the first commit and test commit")
         Text("Second line text")
             .padding()
+        print("Esus Ice,Esus jui")
     }
 }
 
