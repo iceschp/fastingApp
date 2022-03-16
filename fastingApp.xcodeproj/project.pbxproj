@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1703F57927E1BFFD0077B3AA /* FaceIDSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1703F57827E1BFFD0077B3AA /* FaceIDSwiftUIView.swift */; };
 		486E171A27D067CB001B2106 /* fastingAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E171927D067CB001B2106 /* fastingAppApp.swift */; };
 		486E171C27D067CB001B2106 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E171B27D067CB001B2106 /* ContentView.swift */; };
 		486E171E27D067CD001B2106 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 486E171D27D067CD001B2106 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1703F57827E1BFFD0077B3AA /* FaceIDSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceIDSwiftUIView.swift; sourceTree = "<group>"; };
 		486E171627D067CB001B2106 /* fastingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fastingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		486E171927D067CB001B2106 /* fastingAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fastingAppApp.swift; sourceTree = "<group>"; };
 		486E171B27D067CB001B2106 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -43,8 +45,15 @@
 				A2DC9927466F0F5B66F2AC8A /* Pods-fastingApp.debug.xcconfig */,
 				9243D0BF388862631B9ED71A /* Pods-fastingApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		1703F57A27E1C0080077B3AA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1703F57827E1BFFD0077B3AA /* FaceIDSwiftUIView.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		486E170D27D067CB001B2106 = {
@@ -68,6 +77,7 @@
 		486E171827D067CB001B2106 /* fastingApp */ = {
 			isa = PBXGroup;
 			children = (
+				1703F57A27E1C0080077B3AA /* Login */,
 				486E171927D067CB001B2106 /* fastingAppApp.swift */,
 				486E171B27D067CB001B2106 /* ContentView.swift */,
 				486E171D27D067CD001B2106 /* Assets.xcassets */,
@@ -207,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				486E171C27D067CB001B2106 /* ContentView.swift in Sources */,
+				1703F57927E1BFFD0077B3AA /* FaceIDSwiftUIView.swift in Sources */,
 				486E171A27D067CB001B2106 /* fastingAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
