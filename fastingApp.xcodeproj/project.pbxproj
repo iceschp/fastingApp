@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1703F57927E1BFFD0077B3AA /* FaceIDSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1703F57827E1BFFD0077B3AA /* FaceIDSwiftUIView.swift */; };
+		1703F57E27E1C25C0077B3AA /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1703F57D27E1C25C0077B3AA /* LoginPage.swift */; };
+		1703F58027E1C62C0077B3AA /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1703F57F27E1C62B0077B3AA /* LoginViewModel.swift */; };
 		486E171A27D067CB001B2106 /* fastingAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E171927D067CB001B2106 /* fastingAppApp.swift */; };
 		486E171C27D067CB001B2106 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E171B27D067CB001B2106 /* ContentView.swift */; };
 		486E171E27D067CD001B2106 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 486E171D27D067CD001B2106 /* Assets.xcassets */; };
@@ -17,6 +19,8 @@
 
 /* Begin PBXFileReference section */
 		1703F57827E1BFFD0077B3AA /* FaceIDSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceIDSwiftUIView.swift; sourceTree = "<group>"; };
+		1703F57D27E1C25C0077B3AA /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
+		1703F57F27E1C62B0077B3AA /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		486E171627D067CB001B2106 /* fastingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fastingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		486E171927D067CB001B2106 /* fastingAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fastingAppApp.swift; sourceTree = "<group>"; };
 		486E171B27D067CB001B2106 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,9 +55,24 @@
 		1703F57A27E1C0080077B3AA /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				1703F57827E1BFFD0077B3AA /* FaceIDSwiftUIView.swift */,
+				1703F57D27E1C25C0077B3AA /* LoginPage.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		1703F57B27E1C1F70077B3AA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1703F57F27E1C62B0077B3AA /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1703F57C27E1C2150077B3AA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		486E170D27D067CB001B2106 = {
@@ -77,8 +96,11 @@
 		486E171827D067CB001B2106 /* fastingApp */ = {
 			isa = PBXGroup;
 			children = (
+				1703F57C27E1C2150077B3AA /* View */,
+				1703F57B27E1C1F70077B3AA /* ViewModel */,
 				1703F57A27E1C0080077B3AA /* Login */,
 				486E171927D067CB001B2106 /* fastingAppApp.swift */,
+				1703F57827E1BFFD0077B3AA /* FaceIDSwiftUIView.swift */,
 				486E171B27D067CB001B2106 /* ContentView.swift */,
 				486E171D27D067CD001B2106 /* Assets.xcassets */,
 				486E171F27D067CD001B2106 /* Preview Content */,
@@ -216,8 +238,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1703F57E27E1C25C0077B3AA /* LoginPage.swift in Sources */,
 				486E171C27D067CB001B2106 /* ContentView.swift in Sources */,
 				1703F57927E1BFFD0077B3AA /* FaceIDSwiftUIView.swift in Sources */,
+				1703F58027E1C62C0077B3AA /* LoginViewModel.swift in Sources */,
 				486E171A27D067CB001B2106 /* fastingAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
