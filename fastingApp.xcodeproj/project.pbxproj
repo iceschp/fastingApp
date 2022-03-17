@@ -59,7 +59,6 @@
 		1703F57A27E1C0080077B3AA /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				1703F58127E376B70077B3AA /* GoogleService-Info-2.plist */,
 				1703F57D27E1C25C0077B3AA /* LoginPage.swift */,
 				1703F58327E387D90077B3AA /* Home.swift */,
 			);
@@ -108,6 +107,7 @@
 				486E171927D067CB001B2106 /* fastingAppApp.swift */,
 				1703F57827E1BFFD0077B3AA /* FaceIDSwiftUIView.swift */,
 				486E171B27D067CB001B2106 /* ContentView.swift */,
+				1703F58127E376B70077B3AA /* GoogleService-Info-2.plist */,
 				486E171D27D067CD001B2106 /* Assets.xcassets */,
 				486E171F27D067CD001B2106 /* Preview Content */,
 			);
