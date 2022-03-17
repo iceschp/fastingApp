@@ -39,12 +39,12 @@ struct LoginPage: View {
                 .padding(.top,20)
 
             
-            TextField("Password",text: $loginModel.password)
+            SecureField("Password",text: $loginModel.password)
                 .padding()
                 .background{
                     RoundedRectangle(cornerRadius: 8)
                         .fill(
-                            loginModel.password == ? Color.black.opacity(0.05):
+                            loginModel.password == "" ? Color.black.opacity(0.05):
                                 Color("Orange")
                         )
                 }
@@ -55,6 +55,14 @@ struct LoginPage: View {
                 if useFaceID{
                     Button{
                         // MARK: Do Face ID Action
+                        Task{
+                            do{
+                                try await loginModel.loginUser()
+                            }
+                            catch{
+                                print(error.localizedDescription)
+                            }
+                        }
                     } Label: {
                         VStack(alignment: .leading, spacing: 10) {
                             Label {
@@ -80,7 +88,15 @@ struct LoginPage: View {
             }
             .padding(.vertical, 20)
             Button {
-                
+                Task{
+                    do{
+                        try await loginModel.loginUser()
+                    }
+                    catch{
+                        loginModel.errorMsg = error.localizedDescription
+                        loginModel.showError.toggle()
+                    }
+                }
             } label: {
                 Text("Login")
                     .fontWeight(.semibold)
@@ -93,7 +109,7 @@ struct LoginPage: View {
             }
             .padding(.vertical,35)
             .disabled(loginModel.email == "" || loginModel.password, =="")
-            .opacity(loginModel.email == "" || loginModel.password =="" ? 0.5 : 1)
+            .opacity(loginModel.email == "" || loginModel.password, =="" ? 0.5 : 1)
             NavigationLink{
                 //MARK Going home without login
             Label: do {
@@ -104,6 +120,7 @@ struct LoginPage: View {
         }
         .padding(.horizontal,25)
         .padding(.vertical)
+        .alert(loginModel.errorMsg, isPresented: $loginModel.showError)
         
 
     }

@@ -11,6 +11,10 @@ struct ContentView: View {
     var body: some View {
         Text("Test text content")
             .padding()
+        NavigationView {
+        LoginPage
+                .navigationBarHidden(true)
+        }
     }
 }
 
