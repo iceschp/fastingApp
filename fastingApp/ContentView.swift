@@ -14,45 +14,70 @@ struct ContentView: View {
     
     init() {
         UITabBar.appearance().unselectedItemTintColor = .orange
-        UITabBar.appearance().barTintColor = .blue
+        UITabBar.appearance().barTintColor = .red
+    }
+    
+    struct HomeView: View {
+        var body: some View {
+            ZStack {
+                Text("กินนำกันเด้อ")
+                    .font(.system(size: 30, weight: .bold, design: .rounded))
+                    .frame(width: 200, height: 30)
+                    .position(x: 100, y: 50)
+                
+                Image("picture-1")
+                    .resizable()
+                    .frame(width: 200, height: 200)
+                    .position(x: 280, y: 150)
+                
+                VStack {
+                    Text("สุขภาพที่ดีเริ่มได้ที่ตัวเรา")
+                        .foregroundColor(.white)
+                        .frame(width: 300, height: 30)
+                        .position(x: 100, y: 120)
+                }
+                
+            }
+            .background(Color.orange.ignoresSafeArea(.all, edges: .top))
+            .background(Color.white.ignoresSafeArea(.all, edges: .bottom))
+        }
+    }
+    
+    struct ChartView: View {
+        var body: some View {
+            Color.pink
+        }
+    }
+    
+    struct AccountView: View {
+        var body: some View {
+            Color.blue
+        }
     }
     
     var body: some View {
         TabView(selection: $selectedIndex) {
-            Text("Home tab")
-                .font(.system(size: 30, weight: .bold, design: .rounded))
+            
+            HomeView()
                 .tabItem {
                     Image(systemName: "house.fill")
                 }
-
-            Text("Statistic tab")
-                .font(.system(size: 30, weight: .bold, design: .rounded))
+                .tag(0)
+            
+            ChartView()
                 .tabItem {
                     Image(systemName: "chart.bar.fill")
                 }
-
-            Text("Account tab")
-                .font(.system(size: 30, weight: .bold, design: .rounded))
+                .tag(1)
+            
+            AccountView()
                 .tabItem {
                     Image(systemName: "person.fill")
                 }
+                .tag(2)
         }
         .accentColor(.black)
         
-//        VStack {
-//            Text("Home")
-//
-//            ZStack {
-//                Image("picture-1")
-//                    .resizable()
-//                    .frame(width: 200, height: 200)
-//                    .position(x: 250, y: 200)
-//            }
-//
-//            HStack {
-//
-//            }
-//        }
     }
 }
 
