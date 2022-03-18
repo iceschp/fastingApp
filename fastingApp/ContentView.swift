@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        Text("Main text")
         TabView {
             Text("Home tab")
                 .font(.system(size: 30, weight: .bold, design: .rounded))
@@ -27,11 +28,6 @@ struct ContentView: View {
                 .tabItem {
                     Image(systemName: "person.fill")
                 }
-        Text("Main branch text")
-            .padding()
-        NavigationView {
-        LoginPage
-                .navigationBarHidden(true)
         }
         .accentColor(.black)
     }
