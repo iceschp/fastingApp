@@ -27,6 +27,11 @@ struct ContentView: View {
                 .tabItem {
                     Image(systemName: "person.fill")
                 }
+        Text("Main branch text")
+            .padding()
+        NavigationView {
+        LoginPage
+                .navigationBarHidden(true)
         }
         .accentColor(.black)
     }
