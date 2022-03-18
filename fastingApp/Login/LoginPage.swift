@@ -31,12 +31,12 @@ struct LoginPage: View {
                 .background{
                     RoundedRectangle(cornerRadius: 8)
                         .fill(
-                            loginModel.email == ? Color.black.opacity(0.05):
+                            loginModel.email == "" ? Color.black.opacity(0.05):
                                 Color("Orange")
                         )
                 }
                 .textInputAutocapitalization(.never)
-                .padding(.top,20)
+                .padding(.top,25)
 
             
             SecureField("Password",text: $loginModel.password)
@@ -52,16 +52,17 @@ struct LoginPage: View {
                 .padding(.top,15)
             // MARK: User Prompt to ask to store Login using FaceID on next time
             Group{
-                if useFaceID{
+                if loginModel.useFaceID{
                     Button{
                         // MARK: Do Face ID Action
-                        Task{
-                            do{
-                                try await loginModel.loginUser()
-                            }
-                            catch{
-                                print(error.localizedDescription)
-                            }
+                       Task{
+                           do{
+                               try await loginModel.authenticateUesr()
+                           }
+                           catch{
+                               loginModel.errorMsg = error.localizedDescription
+                               loginModel.showError.toggle()
+                           }
                         }
                     } Label: {
                         VStack(alignment: .leading, spacing: 10) {
@@ -90,7 +91,7 @@ struct LoginPage: View {
             Button {
                 Task{
                     do{
-                        try await loginModel.loginUser()
+                        try await loginModel.loginUser(useFaceID: useFaceID)
                     }
                     catch{
                         loginModel.errorMsg = error.localizedDescription
