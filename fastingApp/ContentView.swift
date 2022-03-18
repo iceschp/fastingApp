@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Test text content")
+        Text("Main branch text")
             .padding()
         NavigationView {
         LoginPage
