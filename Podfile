@@ -16,5 +16,8 @@ target 'fastingApp' do
     pod 'SwiftColor'
     pod 'SwiftGifOrigin', '~> 1.7.0'
     pod "QrcodeBuilder"
-
+    pod 'FirebaseCore'
+    pod 'Firebase/Database'
+    pod 'Firebase/Auth'
+    pod 'Firebase/Storage'
 end
