@@ -26,30 +26,35 @@ struct Header: View {
             HStack {
                 VStack(alignment: .leading, spacing: 10) {
                     Text("กินนำกันเด้อ")
-                        .font(.title).bold()
+                        .font(.system(size: 35)).bold()
+                    
+                    Text("สุขภาพที่ดีเริ่มต้นที่ตัวเรา")
+                        .foregroundColor(.white)
                 }
-                
                 Spacer(minLength: 0)
                 
-                Image("picture-1")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(height: 230)
-                
+                ZStack {
+                    Image("picture-1")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .offset(x: 20, y: 45)
+                }
             }
-            .padding()
+            .padding(.leading, 15)
+            .padding(.trailing, 15)
+            .background(Color.orange).edgesIgnoringSafeArea(.all)
             
-//            Spacer(minLength: 0)
+            Spacer(minLength: 0)
             
             VStack {
-                LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 10), count: 2), spacing: 10) {
+                LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 15), count: 2), spacing: 15) {
                     
                     ForEach(menus) { menu in
-                        
                         CardView(menu: menu)
                     }
                 }
                 .padding(10)
+                Spacer(minLength: 0)
             }
         }
     }
@@ -60,24 +65,27 @@ struct CardView: View {
     
     var body: some View {
         VStack {
-            Text(menu.name)
-                .font(.system(size: 24))
-                .padding(.top, 10)
-                .padding(.bottom, 10)
+                Text(menu.name)
+                    .font(.system(size: 24))
+                    .padding(.top, 15)
+                    .padding(.bottom, 10)
+            
+            Spacer(minLength: 5)
             
             Text(menu.icon)
-                .font(.system(size: 50))
+                .font(.system(size: 70))
+            
+            Spacer(minLength: 5)
             
             HStack {
                 VStack(alignment: .leading, spacing: 10) {
                     Text(menu.subMenu)
                         .font(.system(size: 18)).bold()
-                        .padding(.leading)
                     Text(menu.caption)
                         .font(.system(size: 12))
-                        .padding(.leading)
                 }
                 .foregroundColor(.black)
+                .padding(.bottom, 5)
                 Spacer(minLength: 0)
             }
             .padding()
