@@ -109,8 +109,8 @@ struct LoginPage: View {
                     }
             }
             .padding(.vertical,35)
-            .disabled(loginModel.email == "" || loginModel.password, =="")
-            .opacity(loginModel.email == "" || loginModel.password, =="" ? 0.5 : 1)
+            .disabled(loginModel.email == "" || loginModel.password, == "")
+            .opacity(loginModel.email == "" || loginModel.password, == "" ? 0.5 : 1)
             NavigationLink{
                 //MARK Going home without login
             Label: do {
@@ -121,7 +121,7 @@ struct LoginPage: View {
         }
         .padding(.horizontal,25)
         .padding(.vertical)
-        .alert(loginModel.errorMsg, isPresented: $loginModel.showError)
+        .alert(loginModel.errorMsg, isPresented: $loginModel.showError, actions: )
         
 
     }
