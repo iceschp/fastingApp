@@ -8,15 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		1703F58227E376B70077B3AA /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1703F58127E376B70077B3AA /* GoogleService-Info-2.plist */; };
-		1704B24927E8E6DD0008FBD7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1704B24827E8E6DD0008FBD7 /* LoginView.swift */; };
-		1704B24D27E8E83C0008FBD7 /* FirebaseUAMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1704B24C27E8E83C0008FBD7 /* FirebaseUAMApp.swift */; };
-		1704B25227E8EB910008FBD7 /* InputTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1704B25127E8EB910008FBD7 /* InputTextFieldView.swift */; };
-		1704B25527EA2B200008FBD7 /* PreviewLayoutComponentModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1704B25427EA2B200008FBD7 /* PreviewLayoutComponentModifier.swift */; };
-		1704B25727EA37ED0008FBD7 /* InputPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1704B25627EA37ED0008FBD7 /* InputPasswordView.swift */; };
+		1704B25827EAB9FB0008FBD7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1704B24827E8E6DD0008FBD7 /* LoginView.swift */; };
+		1704B25927EABA0F0008FBD7 /* fastingAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E171927D067CB001B2106 /* fastingAppApp.swift */; };
+		1704B25A27EABA210008FBD7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E171B27D067CB001B2106 /* ContentView.swift */; };
+		1704B25C27EABA670008FBD7 /* InputTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1704B25127E8EB910008FBD7 /* InputTextFieldView.swift */; };
+		1704B25D27EABA6C0008FBD7 /* InputPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1704B25627EA37ED0008FBD7 /* InputPasswordView.swift */; };
+		1704B25E27EABA990008FBD7 /* PreviewLayoutComponentModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1704B25427EA2B200008FBD7 /* PreviewLayoutComponentModifier.swift */; };
+		1704B26027EAFC870008FBD7 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1704B25F27EAFC860008FBD7 /* ButtonView.swift */; };
 		17988D5A27E82B230028BEA0 /* Pods_fastingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE5F7D23E9923A0467174CBB /* Pods_fastingApp.framework */; };
 		17988D5B27E82B230028BEA0 /* Pods_fastingApp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FE5F7D23E9923A0467174CBB /* Pods_fastingApp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		486E171A27D067CB001B2106 /* fastingAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E171927D067CB001B2106 /* fastingAppApp.swift */; };
-		486E171C27D067CB001B2106 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E171B27D067CB001B2106 /* ContentView.swift */; };
 		486E171E27D067CD001B2106 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 486E171D27D067CD001B2106 /* Assets.xcassets */; };
 		486E172127D067CD001B2106 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 486E172027D067CD001B2106 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -42,6 +42,7 @@
 		1704B25127E8EB910008FBD7 /* InputTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextFieldView.swift; sourceTree = "<group>"; };
 		1704B25427EA2B200008FBD7 /* PreviewLayoutComponentModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewLayoutComponentModifier.swift; sourceTree = "<group>"; };
 		1704B25627EA37ED0008FBD7 /* InputPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPasswordView.swift; sourceTree = "<group>"; };
+		1704B25F27EAFC860008FBD7 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		172D549A27E4E03300F5240F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		17988D4227E8256A0028BEA0 /* FirebaseStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17988D4B27E828F10028BEA0 /* FirebaseAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +121,7 @@
 		1704B25027E8EB620008FBD7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1704B25F27EAFC860008FBD7 /* ButtonView.swift */,
 				1704B25127E8EB910008FBD7 /* InputTextFieldView.swift */,
 				1704B25627EA37ED0008FBD7 /* InputPasswordView.swift */,
 			);
@@ -309,13 +311,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1704B24D27E8E83C0008FBD7 /* FirebaseUAMApp.swift in Sources */,
-				1704B24927E8E6DD0008FBD7 /* LoginView.swift in Sources */,
-				1704B25227E8EB910008FBD7 /* InputTextFieldView.swift in Sources */,
-				1704B25527EA2B200008FBD7 /* PreviewLayoutComponentModifier.swift in Sources */,
-				486E171C27D067CB001B2106 /* ContentView.swift in Sources */,
-				1704B25727EA37ED0008FBD7 /* InputPasswordView.swift in Sources */,
-				486E171A27D067CB001B2106 /* fastingAppApp.swift in Sources */,
+				1704B25E27EABA990008FBD7 /* PreviewLayoutComponentModifier.swift in Sources */,
+				1704B25D27EABA6C0008FBD7 /* InputPasswordView.swift in Sources */,
+				1704B25C27EABA670008FBD7 /* InputTextFieldView.swift in Sources */,
+				1704B25A27EABA210008FBD7 /* ContentView.swift in Sources */,
+				1704B25927EABA0F0008FBD7 /* fastingAppApp.swift in Sources */,
+				1704B26027EAFC870008FBD7 /* ButtonView.swift in Sources */,
+				1704B25827EAB9FB0008FBD7 /* LoginView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
