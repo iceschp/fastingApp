@@ -101,13 +101,14 @@ struct Menu: Identifiable {
     var subMenu : String
     var caption : String
     var icon : String
+    var color : String
 }
 
 var menus = [
     
-    Menu(name: "Diet Meal", subMenu: "เมนูอาหารไทย", caption: "รวบรวมมากกว่า 200 เมนู", icon: "🥑"),
-    Menu(name: "Drink Water", subMenu: "ดื่มน้ำ", caption: "Stay hydrated", icon: "🥛"),
-    Menu(name: "Saved Menus", subMenu: "เมนูที่ถูกบันทึกไว้", caption: "เมนูอาหารไทยที่บันทึกไว้", icon: "❤️"),
-    Menu(name: "Note", subMenu: "เมนูอาหารไทย", caption: "รวบรวมมากกว่า 200 เมนู", icon: "🖍")
+    Menu(name: "Diet Meal", subMenu: "เมนูอาหารไทย", caption: "รวบรวมมากกว่า 200 เมนู", icon: "🥑", color: "yellow"),
+    Menu(name: "Drink Water", subMenu: "ดื่มน้ำ", caption: "Stay hydrated", icon: "🥛", color: "blue"),
+    Menu(name: "Saved Menus", subMenu: "เมนูที่ถูกบันทึกไว้", caption: "เมนูอาหารไทยที่บันทึกไว้", icon: "❤️", color: "green"),
+    Menu(name: "Note", subMenu: "เมนูอาหารไทย", caption: "รวบรวมมากกว่า 200 เมนู", icon: "🖍", color: "pink")
 ]
 
