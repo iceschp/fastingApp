@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        Header()
+        CustomTabView()
     }
 }
 
@@ -20,19 +20,33 @@ struct HomeView_Previews: PreviewProvider {
 }
 
 struct CustomTabView: View {
+    
+    @State var selectedTab = "home"
+    
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
             
             Header()
             
             HStack(spacing: 0){
-                
+                ForEach(tabs, id: \.self) { image in
+                    
+                    TabButton(image: image, selectedTab: $selectedTab)
+                    
+                    if image != tabs.last {
+                        Spacer(minLength: 0)
+                    }
+                    
+                }
             }
+            .padding(.horizontal,25)
+            .padding(.vertical,5)
+            .background(Color.orange)
         }
     }
 }
 
-var tabs = ["Home", "Chart", "Account"]
+var tabs = ["home.fill", "bar.chart.fill", "person.fill"]
 
 struct TabButton: View {
     
@@ -43,7 +57,7 @@ struct TabButton: View {
         Button(action: {selectedTab = image}) {
             Image(image)
                 .renderingMode(.template)
-                .foregroundColor(selectedTab == image ? Color("tab") : Color.black.opacity(0.4))
+                .foregroundColor(selectedTab == image ? Color("tab") : Color.white)
                 .padding()
         }
     }
