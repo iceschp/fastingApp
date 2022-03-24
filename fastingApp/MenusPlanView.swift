@@ -14,13 +14,34 @@ struct MenusPlanView: View {
 }
 
 struct PlanHeader: View {
+    
+    @State var txt = ""
+    
     var body: some View {
         VStack {
-            Text("วันนี้ทานอะไรดีคะ?")
-                .font(.system(size: 20).bold())
-                .foregroundColor(Color.pink)
+            VStack {
+                Text("วันนี้ทานอะไรดีคะ?")
+                    .font(.system(size: 20).bold())
+                    .foregroundColor(Color.pink)
+            }
+            .padding(.top, 50)
+            .padding(.bottom, 30)
             
+            HStack(spacing: 15) {
+                Image(systemName: "magnifyingglass")
+                    .foregroundColor(.gray)
+                
+                TextField("ค้นหาเมนูอาหาร . . .", text: $txt)
+            }
+            .padding(.vertical, 12)
+            .padding(.horizontal)
+            .background(Color.white)
+            .clipShape(Capsule())
+            
+            Spacer(minLength: 0)
         }
+        .padding()
+        .background(Color.green).edgesIgnoringSafeArea(.all)
     }
 }
 
