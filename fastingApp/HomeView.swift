@@ -10,13 +10,42 @@ import SwiftUI
 struct HomeView: View {
     var body: some View {
         Header()
-
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+    }
+}
+
+struct CustomTabView: View {
+    var body: some View {
+        ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
+            
+            Header()
+            
+            HStack(spacing: 0){
+                
+            }
+        }
+    }
+}
+
+var tabs = ["Home", "Chart", "Account"]
+
+struct TabButton: View {
+    
+    var image : String
+    @Binding var selectedTab : String
+    
+    var body: some View {
+        Button(action: {selectedTab = image}) {
+            Image(image)
+                .renderingMode(.template)
+                .foregroundColor(selectedTab == image ? Color("tab") : Color.black.opacity(0.4))
+                .padding()
+        }
     }
 }
 
