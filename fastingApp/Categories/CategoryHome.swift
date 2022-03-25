@@ -21,10 +21,10 @@ struct PlanHeader: View {
         VStack(alignment: .leading) {
             VStack {
                 Text("วันนี้ทานอะไรดีคะ?")
-                    .font(.system(size: 20).bold())
-                    .foregroundColor(Color.pink)
+                    .font(.system(size: 25).bold())
+                    .foregroundColor(Color.init(uiColor: UIColor(red: 0.945, green: 0.659, blue: 0.745, alpha: 1)))
                     .padding(.top, 20)
-                    .padding(.bottom, 30)
+                    .padding(.bottom, 20)
                 
                 HStack(spacing: 15) {
                     Image(systemName: "magnifyingglass")
@@ -39,16 +39,43 @@ struct PlanHeader: View {
                 .padding(.horizontal, 15)
             }
             .padding(.bottom, 50)
-            .background(Color.green)
+            .background(Color.init(uiColor: UIColor(red: 0.176, green: 0.412, blue: 0.282, alpha: 1)))
             
             Spacer(minLength: 0)
             
-            VStack(alignment: .leading) {
-                Text("ประเภทอาหาร")
-                    .font(.system(size: 16))
-                Spacer()
+//            VStack(alignment: .leading) {
+//                Text("ประเภทอาหาร")
+//                    .font(.system(size: 16))
+//                Spacer(minLength: 0)
+//            }
+//            .padding()
+            
+            VStack {
+                HStack {
+                    VStack {
+                        ZStack {
+                            Image("picture-2")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                        }
+                    }
+                    Text("สุขภาพที่ดีเริ่มได้ที่ตัวเรา")
+                        .font(.system(size: 24))
+                        .foregroundColor(.black)
+                        .padding(20)
+                }
+                .background(Color.init(uiColor: UIColor(red: 0.851, green: 0.953, blue: 0.996, alpha: 1)))
+                .border(Color.black)
+                .cornerRadius(20)
+                .padding()
             }
-            .padding()
+            
+            VStack {
+                Text("เมนูที่น่าสนใจ 🔥")
+                    .font(.system(size: 14)).bold()
+                    .padding(.leading, 10)
+                Spacer(minLength: 0)
+            }
             
         }
     }

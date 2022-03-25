@@ -18,6 +18,7 @@
 		486E172127D067CD001B2106 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 486E172027D067CD001B2106 /* Preview Assets.xcassets */; };
 		48CC5BA127EAF8C200341151 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CC5BA027EAF8C100341151 /* HomeView.swift */; };
 		48CC5BA527EC230400341151 /* CategoryHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CC5BA427EC230400341151 /* CategoryHome.swift */; };
+		48FBA40227EDA3AA008D7AD3 /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FBA40127EDA3AA008D7AD3 /* CategoryRow.swift */; };
 		BC4572F5093593854BB9952C /* Pods_fastingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE5F7D23E9923A0467174CBB /* Pods_fastingApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		486E172027D067CD001B2106 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		48CC5BA027EAF8C100341151 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		48CC5BA427EC230400341151 /* CategoryHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHome.swift; sourceTree = "<group>"; };
+		48FBA40127EDA3AA008D7AD3 /* CategoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
 		9243D0BF388862631B9ED71A /* Pods-fastingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fastingApp.release.xcconfig"; path = "Target Support Files/Pods-fastingApp/Pods-fastingApp.release.xcconfig"; sourceTree = "<group>"; };
 		A2DC9927466F0F5B66F2AC8A /* Pods-fastingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fastingApp.debug.xcconfig"; path = "Target Support Files/Pods-fastingApp/Pods-fastingApp.debug.xcconfig"; sourceTree = "<group>"; };
 		FE5F7D23E9923A0467174CBB /* Pods_fastingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fastingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +115,7 @@
 				486E171B27D067CB001B2106 /* ContentView.swift */,
 				48CC5BA027EAF8C100341151 /* HomeView.swift */,
 				48FBA40027EDA17B008D7AD3 /* Categories */,
+				48FBA40527EDA91C008D7AD3 /* Model */,
 				1703F58127E376B70077B3AA /* GoogleService-Info-2.plist */,
 				486E171D27D067CD001B2106 /* Assets.xcassets */,
 				486E171F27D067CD001B2106 /* Preview Content */,
@@ -132,8 +135,16 @@
 			isa = PBXGroup;
 			children = (
 				48CC5BA427EC230400341151 /* CategoryHome.swift */,
+				48FBA40127EDA3AA008D7AD3 /* CategoryRow.swift */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		48FBA40527EDA91C008D7AD3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		AFA16DCA8E2C288A7ADF0CFE /* Frameworks */ = {
@@ -266,6 +277,7 @@
 				48CC5BA527EC230400341151 /* CategoryHome.swift in Sources */,
 				1703F58027E1C62C0077B3AA /* LoginViewModel.swift in Sources */,
 				1703F58427E387D90077B3AA /* Home.swift in Sources */,
+				48FBA40227EDA3AA008D7AD3 /* CategoryRow.swift in Sources */,
 				486E171A27D067CB001B2106 /* fastingAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
