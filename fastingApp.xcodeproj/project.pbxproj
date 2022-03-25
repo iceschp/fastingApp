@@ -16,7 +16,6 @@
 		486E171C27D067CB001B2106 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E171B27D067CB001B2106 /* ContentView.swift */; };
 		486E171E27D067CD001B2106 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 486E171D27D067CD001B2106 /* Assets.xcassets */; };
 		486E172127D067CD001B2106 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 486E172027D067CD001B2106 /* Preview Assets.xcassets */; };
-		48CC5BA127EAF8C200341151 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CC5BA027EAF8C100341151 /* HomeView.swift */; };
 		48CC5BA527EC230400341151 /* CategoryHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CC5BA427EC230400341151 /* CategoryHome.swift */; };
 		48FBA40227EDA3AA008D7AD3 /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FBA40127EDA3AA008D7AD3 /* CategoryRow.swift */; };
 		BC4572F5093593854BB9952C /* Pods_fastingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE5F7D23E9923A0467174CBB /* Pods_fastingApp.framework */; };
@@ -33,7 +32,6 @@
 		486E171B27D067CB001B2106 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		486E171D27D067CD001B2106 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		486E172027D067CD001B2106 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		48CC5BA027EAF8C100341151 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		48CC5BA427EC230400341151 /* CategoryHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHome.swift; sourceTree = "<group>"; };
 		48FBA40127EDA3AA008D7AD3 /* CategoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
 		9243D0BF388862631B9ED71A /* Pods-fastingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fastingApp.release.xcconfig"; path = "Target Support Files/Pods-fastingApp/Pods-fastingApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -112,8 +110,7 @@
 				1703F57A27E1C0080077B3AA /* Login */,
 				486E171927D067CB001B2106 /* fastingAppApp.swift */,
 				1703F57827E1BFFD0077B3AA /* FaceIDSwiftUIView.swift */,
-				486E171B27D067CB001B2106 /* ContentView.swift */,
-				48CC5BA027EAF8C100341151 /* HomeView.swift */,
+				48AD5B8027EE11C600A2AFD0 /* Views */,
 				48FBA40027EDA17B008D7AD3 /* Categories */,
 				48FBA40527EDA91C008D7AD3 /* Model */,
 				1703F58127E376B70077B3AA /* GoogleService-Info-2.plist */,
@@ -129,6 +126,14 @@
 				486E172027D067CD001B2106 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		48AD5B8027EE11C600A2AFD0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				486E171B27D067CB001B2106 /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		48FBA40027EDA17B008D7AD3 /* Categories */ = {
@@ -271,7 +276,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1703F57E27E1C25C0077B3AA /* LoginPage.swift in Sources */,
-				48CC5BA127EAF8C200341151 /* HomeView.swift in Sources */,
 				486E171C27D067CB001B2106 /* ContentView.swift in Sources */,
 				1703F57927E1BFFD0077B3AA /* FaceIDSwiftUIView.swift in Sources */,
 				48CC5BA527EC230400341151 /* CategoryHome.swift in Sources */,

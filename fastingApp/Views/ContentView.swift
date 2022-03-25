@@ -1,21 +1,21 @@
 //
-//  HomeView.swift
+//  ContentView.swift
 //  fastingApp
 //
-//  Created by Warunya on 23/3/2565 BE.
+//  Created by Warunya on 3/3/2565 BE.
 //
 
 import SwiftUI
 
-struct HomeView: View {
+struct ContentView: View {
     var body: some View {
         CustomTabView()
     }
 }
 
-struct HomeView_Previews: PreviewProvider {
+struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        ContentView()
     }
 }
 
@@ -27,6 +27,15 @@ struct CustomTabView: View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
             
             Header()
+            
+            TabView(selection: $selectedTab) {
+                Header()
+                    .tag("home")
+                CategoryHome()
+                    .tag("barchart")
+//                Person()
+//                    .tag("person")
+            }
             
             HStack(spacing: 0){
                 ForEach(tabs, id: \.self) { image in
@@ -46,7 +55,7 @@ struct CustomTabView: View {
     }
 }
 
-var tabs = ["home.fill", "bar.chart.fill", "person.fill"]
+var tabs = ["home", "barchart", "person"]
 
 struct TabButton: View {
     
@@ -145,14 +154,12 @@ struct Menu: Identifiable {
     var subMenu : String
     var caption : String
     var icon : String
-    var color : String
 }
 
 var menus = [
     
-    Menu(name: "Diet Meal", subMenu: "เมนูอาหารไทย", caption: "รวบรวมมากกว่า 200 เมนู", icon: "🥑", color: "yellow"),
-    Menu(name: "Drink Water", subMenu: "ดื่มน้ำ", caption: "Stay hydrated", icon: "🥛", color: "blue"),
-    Menu(name: "Saved Menus", subMenu: "เมนูที่ถูกบันทึกไว้", caption: "เมนูอาหารไทยที่บันทึกไว้", icon: "❤️", color: "green"),
-    Menu(name: "Note", subMenu: "เมนูอาหารไทย", caption: "รวบรวมมากกว่า 200 เมนู", icon: "🖍", color: "pink")
+    Menu(name: "Diet Meal", subMenu: "เมนูอาหารไทย", caption: "รวบรวมมากกว่า 200 เมนู", icon: "🥑"),
+    Menu(name: "Drink Water", subMenu: "ดื่มน้ำ", caption: "Stay hydrated", icon: "🥛"),
+    Menu(name: "Saved Menus", subMenu: "เมนูที่ถูกบันทึกไว้", caption: "เมนูอาหารไทยที่บันทึกไว้", icon: "❤️"),
+    Menu(name: "Note", subMenu: "บันทึก", caption: "จดบันทึกไดอารี่", icon: "🖍")
 ]
-
