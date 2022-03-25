@@ -2,7 +2,7 @@
 //  FirebaseUAMApp.swift
 //  fastingApp
 //
-//  Created by Milk Jiraporn on 22/3/2565 BE.
+//  Created by Milk Jiraporn on 25/3/2565 BE.
 //
 
 import SwiftUI
@@ -14,13 +14,23 @@ final class AppDelegate: NSObject,UIApplicationDelegate {
         return true
     }
 }
+
 @main
 struct FirebaseUAMApp: App {
-    @UIApplicationDelegateAdaptor (AppDelegate.self) var delegate
+    
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @StateObject var sessionService =  SessionServiceImpl()
     var body: some Scene{
         WindowGroup{
             NavigationView{
-                LoginView()
+                switch sessionService.state {
+                case .logedIn:
+                    HomeView()
+                        .environmentObject(sessionService)
+                case .loggedOut:
+                    LoginView()
+                }
+                
             }
         }
     }

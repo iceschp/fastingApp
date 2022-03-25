@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Firebase
+import FirebaseAuth
 
 final class AppDelegate: NSObject,UIApplicationDelegate {
     func application(_ application: UIApplication,didFinishLaunchWith launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil)->Bool {
@@ -15,13 +16,22 @@ final class AppDelegate: NSObject,UIApplicationDelegate {
     }
 }
 @main
-struct FirebaseUAMApp: App {
+struct fastingApp: App {
     @UIApplicationDelegateAdaptor (AppDelegate.self) var delegate
+    @StateObject var sessionService =  SessionServiceImpl()
     var body: some Scene{
         WindowGroup{
             NavigationView{
-                LoginView()
+                switch sessionService.state {
+                case .logedIn:
+                    HomeView()
+                        .environmentObject(sessionService)
+                case .loggedOut:
+                    LoginView()
+                }
+
             }
         }
     }
 }
+

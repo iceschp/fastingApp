@@ -8,36 +8,39 @@
 import SwiftUI
 
 struct RegisterView: View {
-    @Environment(\.presentationMode) var presentationMode
+    @StateObject private var  vm = RegistrationViewModelImpl(
+    service: RegistrationServiceImpl()
+    )
+    
     var body: some View {
         NavigationView {
             VStack(spacing: 32){
                 VStack(spacing: 16){
-            InputTextFieldView(text: .constant(""),
+                    InputTextFieldView(text: $vm.userDetails.email,
                                placeholder: "Email",
                                keyboardType: .emailAddress,
                                sfSymbol: "envelope")
-            InputPasswordView(password: .constant(""),
+            InputPasswordView(password: $vm.userDetails.password,
                               placeholder: "Password",
                               sfSymbol: "lock")
         
       Divider()
-                    InputTextFieldView(text: .constant(""),
+                    InputTextFieldView(text: $vm.userDetails.firstName,
                                        placeholder: "First Name",
                                        keyboardType: .namePhonePad,
                                        sfSymbol: nil)
                     
-                    InputTextFieldView(text: .constant(""),
+                    InputTextFieldView(text: $vm.userDetails.lastName,
                                        placeholder: "Last Name",
                                        keyboardType: .namePhonePad,
                                        sfSymbol: nil)
-                    InputTextFieldView(text: .constant(""),
+                    InputTextFieldView(text: $vm.userDetails.occupation,
                                        placeholder: "Occupation",
                                        keyboardType: .namePhonePad,
                                        sfSymbol: nil)
         }
                 ButtonView(title:"Sign up"){
-                    
+                    vm.register()
                 }
     }
             .padding(.horizontal,15)
