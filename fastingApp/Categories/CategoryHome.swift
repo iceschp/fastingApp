@@ -43,32 +43,34 @@ struct PlanHeader: View {
             
             Spacer(minLength: 0)
             
-//            VStack(alignment: .leading) {
-//                Text("ประเภทอาหาร")
-//                    .font(.system(size: 16))
-//                Spacer(minLength: 0)
-//            }
-//            .padding()
+            //            VStack(alignment: .leading) {
+            //                Text("ประเภทอาหาร")
+            //                    .font(.system(size: 16))
+            //                Spacer(minLength: 0)
+            //            }
+            //            .padding()
             
             VStack {
-                HStack {
-                    VStack {
-                        ZStack {
-                            Image("picture-2")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                        }
+                ZStack {
+                    HStack (spacing: 0) {
+                        Image("picture-2")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                        
+                        Text("สุขภาพที่ดีเริ่มได้ที่ตัวเรา")
+                            .font(.system(size: 24))
+                            .foregroundColor(.black)
+                            .padding(20)
                     }
-                    Text("สุขภาพที่ดีเริ่มได้ที่ตัวเรา")
-                        .font(.system(size: 24))
-                        .foregroundColor(.black)
-                        .padding(20)
                 }
-                .background(Color.init(uiColor: UIColor(red: 0.851, green: 0.953, blue: 0.996, alpha: 1)))
-                .border(Color.black)
-                .cornerRadius(20)
-                .padding()
             }
+            .overlay(
+                RoundedRectangle(cornerRadius: 30)
+                    .stroke(Color.black, lineWidth: 1)
+            )
+            .background(Color.init(uiColor: UIColor(red: 0.851, green: 0.953, blue: 0.996, alpha: 1)))
+            .cornerRadius(30)
+            .padding()
             
             VStack {
                 Text("เมนูที่น่าสนใจ 🔥")
