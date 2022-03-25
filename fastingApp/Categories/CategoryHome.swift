@@ -50,15 +50,6 @@ struct PlanHeader: View {
             }
             .padding()
             
-            Categories()
-        }
-    }
-}
-
-struct Categories: View {
-    var body: some View {
-        VStack {
-           
         }
     }
 }
