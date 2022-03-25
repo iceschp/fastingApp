@@ -30,7 +30,8 @@ struct PlanHeader: View {
                     Image(systemName: "magnifyingglass")
                         .foregroundColor(.gray)
                     
-                    TextField("ค้นหาเมนูอาหาร . . .", text: $txt)
+                    TextField("ค้นหาเมนูอาหาร...", text: $txt)
+                        .font(.system(size: 18))
                 }
                 .padding(.vertical, 12)
                 .padding(.horizontal)
@@ -74,7 +75,7 @@ struct PlanHeader: View {
             
             VStack {
                 Text("เมนูที่น่าสนใจ 🔥")
-                    .font(.system(size: 14)).bold()
+                    .font(.system(size: 16)).bold()
                     .padding(.leading, 10)
                 Spacer(minLength: 0)
             }
