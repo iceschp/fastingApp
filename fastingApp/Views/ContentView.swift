@@ -66,7 +66,7 @@ struct TabButton: View {
         Button(action: {selectedTab = image}) {
             Image(image)
                 .renderingMode(.template)
-                .foregroundColor(selectedTab == image ? Color("tab") : Color.white)
+                .foregroundColor(selectedTab == image ? Color.white : Color.black)
                 .padding()
         }
     }
