@@ -41,7 +41,7 @@ struct CustomTabView: View {
             }
             .padding(.horizontal,25)
             .padding(.vertical,5)
-            .background(Color.orange)
+            .background(Color.init(uiColor: UIColor(red: 0.922, green: 0.38, blue: 0.239, alpha: 1)))
         }
     }
 }
@@ -72,6 +72,7 @@ struct Header: View {
                         .font(.system(size: 35)).bold()
                     
                     Text("สุขภาพที่ดีเริ่มต้นที่ตัวเรา")
+                        .font(.system(size: 14))
                         .foregroundColor(.white)
                 }
                 Spacer(minLength: 0)
@@ -85,7 +86,7 @@ struct Header: View {
             }
             .padding(.leading, 15)
             .padding(.trailing, 15)
-            .background(Color.orange).edgesIgnoringSafeArea(.all)
+            .background(Color.init(uiColor: UIColor(red: 0.922, green: 0.38, blue: 0.239, alpha: 1))).edgesIgnoringSafeArea(.all)
             
             Spacer(minLength: 0)
             
@@ -133,7 +134,7 @@ struct CardView: View {
             }
             .padding()
         }
-        .background(Color.yellow)
+        .background(Color.init(uiColor: UIColor(red: 0.851, green: 0.953, blue: 0.996, alpha: 1)))
         .cornerRadius(20)
     }
 }
