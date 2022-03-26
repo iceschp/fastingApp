@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>833207166671-7aff1bocirk47ikgfp6ps9m3kc0hs9um.apps.googleusercontent.com</string>
+	<string>720519117676-td5fnjk8rcitd33ra2m416oissmtlh39.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.833207166671-7aff1bocirk47ikgfp6ps9m3kc0hs9um</string>
+	<string>com.googleusercontent.apps.720519117676-td5fnjk8rcitd33ra2m416oissmtlh39</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCDCTUZ3lu_58VADIKYoYIUXCRPuzMRtWY</string>
+	<string>AIzaSyD7j0tpNwv5S9SBGOwMmocBtJkVOJE-yCw</string>
 	<key>GCM_SENDER_ID</key>
-	<string>833207166671</string>
+	<string>720519117676</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>icce.fastingApp</string>
 	<key>PROJECT_ID</key>
-	<string>fastingapp-f8491</string>
+	<string>fastingapp-ab34b</string>
 	<key>STORAGE_BUCKET</key>
-	<string>fastingapp-f8491.appspot.com</string>
+	<string>fastingapp-ab34b.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:833207166671:ios:177d5dbe63cb94d08f39ba</string>
+	<string>1:720519117676:ios:731fa369d2dc20b3f01149</string>
 </dict>
 </plist>

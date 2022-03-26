@@ -10,16 +10,19 @@ import SwiftUI
 struct LoginView: View {
     @State private var showRegistration = false
     @State private var showForgotPassword = false
+    @StateObject private var vm = LoginViewModelImpl(
+        service: LoginServiceImpl()
+    )
     
     var body: some View {
         VStack(spacing: 16) {
             VStack(spacing: 16) {
-                InputTextFieldView(text: .constant(""),
+                InputTextFieldView(text: $vm.credentials.email,
                                    placeholder: "Email",
                                    keyboardType: .emailAddress,
                                    sfSymbol: "envelope")
                 
-                InputPasswordView(password: .constant(""),
+                InputPasswordView(password: $vm.credentials.password,
                                    placeholder: "Password",
                                    sfSymbol: "lock")
             }
@@ -36,8 +39,7 @@ struct LoginView: View {
             }
             VStack(spacing:16){
                 ButtonView(title: "Login"){
-                    
-                // TODO : Handle presentation to  regisration
+                    vm.login()
                 }
                 ButtonView(title: "Register",
                            background: .clear,
