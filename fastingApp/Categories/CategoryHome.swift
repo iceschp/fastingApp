@@ -44,13 +44,6 @@ struct PlanHeader: View {
             
             Spacer(minLength: 0)
             
-            //            VStack(alignment: .leading) {
-            //                Text("ประเภทอาหาร")
-            //                    .font(.system(size: 16))
-            //                Spacer(minLength: 0)
-            //            }
-            //            .padding()
-            
             VStack {
                 ZStack {
                     HStack (spacing: 0) {
