@@ -12,6 +12,7 @@
 		1703F58027E1C62C0077B3AA /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1703F57F27E1C62B0077B3AA /* LoginViewModel.swift */; };
 		1703F58227E376B70077B3AA /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1703F58127E376B70077B3AA /* GoogleService-Info-2.plist */; };
 		1703F58427E387D90077B3AA /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1703F58327E387D90077B3AA /* Home.swift */; };
+		481FC2DF27F451C90097BC0E /* timeHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481FC2DE27F451C90097BC0E /* timeHome.swift */; };
 		486E171A27D067CB001B2106 /* fastingAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E171927D067CB001B2106 /* fastingAppApp.swift */; };
 		486E171C27D067CB001B2106 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E171B27D067CB001B2106 /* ContentView.swift */; };
 		486E171E27D067CD001B2106 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 486E171D27D067CD001B2106 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 		1703F57F27E1C62B0077B3AA /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		1703F58127E376B70077B3AA /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-2.plist"; sourceTree = "<group>"; };
 		1703F58327E387D90077B3AA /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		481FC2DE27F451C90097BC0E /* timeHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timeHome.swift; sourceTree = "<group>"; };
 		486E171627D067CB001B2106 /* fastingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fastingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		486E171927D067CB001B2106 /* fastingAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fastingAppApp.swift; sourceTree = "<group>"; };
 		486E171B27D067CB001B2106 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -84,6 +86,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		481FC2DD27F451770097BC0E /* timer */ = {
+			isa = PBXGroup;
+			children = (
+				481FC2DE27F451C90097BC0E /* timeHome.swift */,
+			);
+			path = timer;
+			sourceTree = "<group>";
+		};
 		486E170D27D067CB001B2106 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +122,7 @@
 				1703F57827E1BFFD0077B3AA /* FaceIDSwiftUIView.swift */,
 				48AD5B8027EE11C600A2AFD0 /* Views */,
 				48FBA40027EDA17B008D7AD3 /* Categories */,
+				481FC2DD27F451770097BC0E /* timer */,
 				48FBA40527EDA91C008D7AD3 /* Model */,
 				1703F58127E376B70077B3AA /* GoogleService-Info-2.plist */,
 				486E171D27D067CD001B2106 /* Assets.xcassets */,
@@ -280,6 +291,7 @@
 				1703F57927E1BFFD0077B3AA /* FaceIDSwiftUIView.swift in Sources */,
 				48CC5BA527EC230400341151 /* CategoryHome.swift in Sources */,
 				1703F58027E1C62C0077B3AA /* LoginViewModel.swift in Sources */,
+				481FC2DF27F451C90097BC0E /* timeHome.swift in Sources */,
 				1703F58427E387D90077B3AA /* Home.swift in Sources */,
 				48FBA40227EDA3AA008D7AD3 /* CategoryRow.swift in Sources */,
 				486E171A27D067CB001B2106 /* fastingAppApp.swift in Sources */,
