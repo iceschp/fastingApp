@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct chart: View {
+struct timeHome: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct chart_Previews: PreviewProvider {
+struct timeHome_Previews: PreviewProvider {
     static var previews: some View {
-        chart()
+        timeHome()
     }
 }
