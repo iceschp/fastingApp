@@ -20,7 +20,7 @@ struct progressRing: View {
             // Colored Ring
             Circle()
                 .trim(from: 0.0, to: min(progress, 1.0))
-                .stroke(.yellow, style: StrokeStyle(lineWidth: 15.0, lineCap: .round, lineJoin: .round))
+                .stroke(Color.init(uiColor: UIColor(red: 0.937, green: 0.89, blue: 0.298, alpha: 1)), style: StrokeStyle(lineWidth: 15.0, lineCap: .round, lineJoin: .round))
                 .rotationEffect(Angle(degrees: 270))
                 .animation(.easeInOut(duration: 1.0), value: progress)
             
