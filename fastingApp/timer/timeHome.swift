@@ -25,50 +25,52 @@ struct timeHeader: View {
 
 struct content: View {
     var body: some View {
-        VStack {
-            // Fasting Plan
-            Text("16:8")
-                .bold()
-                .padding(.horizontal, 24)
-                .padding(.vertical, 8)
-                .background(.thinMaterial)
-                .cornerRadius(20)
-            
-            // Progress ring
-            progressRing()
-            
-            HStack(spacing: 60) {
-                // Start time
-                VStack(spacing: 5) {
-                    Text("Start")
-                        .opacity(0.7)
-                    
-                    Text(Date(), format: .dateTime.weekday().hour().minute().second())
-                        .bold()
-                }
-                
-                // End time
-                VStack(spacing: 5) {
-                    Text("End")
-                        .opacity(0.7)
-                    
-                    Text(Date().addingTimeInterval(16), format: .dateTime.weekday().hour().minute().second())
-                        .bold()
-                }
-            }
-            
-            Button{
-                
-            } label: {
-                Text("Start fasting")
-                    .font(.title3).bold()
+        ZStack {
+            VStack(spacing: 40) {
+                // Fasting Plan
+                Text("16:8")
+                    .bold()
                     .padding(.horizontal, 24)
                     .padding(.vertical, 8)
                     .background(.thinMaterial)
                     .cornerRadius(20)
+                
+                // Progress ring
+                progressRing()
+                
+                HStack(spacing: 60) {
+                    // Start time
+                    VStack(spacing: 5) {
+                        Text("Start")
+                            .opacity(0.7)
+                        
+                        Text(Date(), format: .dateTime.weekday().hour().minute().second())
+                            .bold()
+                    }
+                    
+                    // End time
+                    VStack(spacing: 5) {
+                        Text("End")
+                            .opacity(0.7)
+                        
+                        Text(Date().addingTimeInterval(16), format: .dateTime.weekday().hour().minute().second())
+                            .bold()
+                    }
+                }
+                
+                Button{
+                    
+                } label: {
+                    Text("Start fasting")
+                        .font(.title3).bold()
+                        .padding(.horizontal, 24)
+                        .padding(.vertical, 8)
+                        .background(.thinMaterial)
+                        .cornerRadius(20)
+                }
             }
+            .foregroundColor(.white)
         }
-        .foregroundColor(.white)
     }
 }
 
