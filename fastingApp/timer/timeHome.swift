@@ -36,7 +36,28 @@ struct content: View {
             
             // Progress ring
             progressRing()
+            
+            HStack(spacing: 60) {
+                // Start time
+                VStack(spacing: 5) {
+                    Text("Start")
+                        .opacity(0.7)
+                    
+                    Text(Date(), format: .dateTime.weekday().hour().minute().second())
+                        .bold()
+                }
+                
+                // End time
+                VStack(spacing: 5) {
+                    Text("End")
+                        .opacity(0.7)
+                    
+                    Text(Date().addingTimeInterval(16), format: .dateTime.weekday().hour().minute().second())
+                        .bold()
+                }
+            }
         }
+        .foregroundColor(.white)
     }
 }
 
