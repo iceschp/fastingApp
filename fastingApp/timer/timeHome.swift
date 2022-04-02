@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct timeHome: View {
+struct TimeHome: View {
+    @StateObject var fastingManager = FastingManager()
     var body: some View {
         timeHeader()
     }
@@ -41,7 +42,7 @@ struct content: View {
             
             VStack(spacing: 40) {
                 // Progress ring
-                progressRing()
+                ProgressRing()
                 
                 HStack(spacing: 60) {
                     // Start time
@@ -81,8 +82,8 @@ struct content: View {
 }
 
 
-struct timeHome_Previews: PreviewProvider {
+struct TimeHome_Previews: PreviewProvider {
     static var previews: some View {
-        timeHome()
+        TimeHome()
     }
 }

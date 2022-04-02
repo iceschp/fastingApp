@@ -7,12 +7,12 @@
 
 import Foundation
 
-enum fastingState {
+enum FastingState {
     case notStarted
     case fasting
     case feeding
 }
 
-class fastingManager: ObservableObject {
-    @Published private(set) var fastingState: fastingState = .notStarted
+class FastingManager: ObservableObject {
+    @Published private(set) var fastingState: FastingState = .notStarted
 }

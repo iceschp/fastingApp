@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct progressRing: View {
+struct ProgressRing: View {
     @State var progress = 0.5
     var body: some View {
         ZStack {
@@ -52,8 +52,8 @@ struct progressRing: View {
     }
 }
 
-struct progressRing_Previews: PreviewProvider {
+struct ProgressRing_Previews: PreviewProvider {
     static var previews: some View {
-        progressRing()
+        ProgressRing()
     }
 }
