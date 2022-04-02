@@ -35,6 +35,11 @@ struct content: View {
                     .background(.thinMaterial)
                     .cornerRadius(20)
                 
+                Spacer()
+            }
+            .padding()
+            
+            VStack(spacing: 40) {
                 // Progress ring
                 progressRing()
                 
@@ -69,8 +74,9 @@ struct content: View {
                         .cornerRadius(20)
                 }
             }
-            .foregroundColor(.white)
+            .padding()
         }
+        .foregroundColor(.white)
     }
 }
 
