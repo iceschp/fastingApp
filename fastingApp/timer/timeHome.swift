@@ -18,6 +18,7 @@ struct timeHeader: View {
         ZStack {
             Color(UIColor(red: 0.945, green: 0.659, blue: 0.745, alpha: 1))
                 .ignoresSafeArea()
+            content()
         }
     }
 }
@@ -25,6 +26,15 @@ struct timeHeader: View {
 struct content: View {
     var body: some View {
         VStack {
+            // Fasting Plan
+            Text("16:8")
+                .bold()
+                .padding(.horizontal, 24)
+                .padding(.vertical, 8)
+                .background(.thinMaterial)
+                .cornerRadius(20)
+            
+            // Progress ring
             progressRing()
         }
     }
