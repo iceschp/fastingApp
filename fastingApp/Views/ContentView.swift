@@ -33,8 +33,8 @@ struct CustomTabView: View {
                     .tag("home")
                 CategoryHome()
                     .tag("barchart")
-//                Person()
-//                    .tag("person")
+                TimeHome()
+                    .tag("person")
             }
             
             HStack(spacing: 0){
