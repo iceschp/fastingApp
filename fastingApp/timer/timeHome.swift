@@ -56,6 +56,17 @@ struct content: View {
                         .bold()
                 }
             }
+            
+            Button{
+                
+            } label: {
+                Text("Start fasting")
+                    .font(.title3).bold()
+                    .padding(.horizontal, 24)
+                    .padding(.vertical, 8)
+                    .background(.thinMaterial)
+                    .cornerRadius(20)
+            }
         }
         .foregroundColor(.white)
     }
