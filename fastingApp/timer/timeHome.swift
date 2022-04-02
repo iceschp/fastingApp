@@ -22,22 +22,15 @@ struct TimeHome: View {
     }
     
     var body: some View {
-        timeHeader()
-    }
-}
-
-struct timeHeader: View {
-    var body: some View {
         ZStack {
             Color(UIColor(red: 0.945, green: 0.659, blue: 0.745, alpha: 1))
                 .ignoresSafeArea()
-            content()
+            
+            content
         }
     }
-}
-
-struct content: View {
-    var body: some View {
+    
+    var content: some View {
         ZStack {
             VStack(spacing: 40) {
                 // Fasting Plan
@@ -59,7 +52,7 @@ struct content: View {
                 HStack(spacing: 60) {
                     // Start time
                     VStack(spacing: 5) {
-                        Text("Start")
+                        Text(fastingManager.fastingState == .notStarted ? "Start" : "Started")
                             .opacity(0.7)
                         
                         Text(Date(), format: .dateTime.weekday().hour().minute().second())
@@ -68,7 +61,7 @@ struct content: View {
                     
                     // End time
                     VStack(spacing: 5) {
-                        Text("End")
+                        Text(fastingManager.fastingState == .notStarted ? "End" : "Ends")
                             .opacity(0.7)
                         
                         Text(Date().addingTimeInterval(16), format: .dateTime.weekday().hour().minute().second())
@@ -79,7 +72,7 @@ struct content: View {
                 Button{
                     
                 } label: {
-                    Text("Start fasting")
+                    Text(fastingManager.fastingState == .fasting ? "End fast" : "Start fasting")
                         .font(.title3).bold()
                         .padding(.horizontal, 24)
                         .padding(.vertical, 8)
@@ -92,6 +85,7 @@ struct content: View {
         .foregroundColor(.white)
     }
 }
+
 
 
 struct TimeHome_Previews: PreviewProvider {
