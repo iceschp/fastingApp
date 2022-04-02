@@ -9,6 +9,18 @@ import SwiftUI
 
 struct TimeHome: View {
     @StateObject var fastingManager = FastingManager()
+    
+    var title: String {
+        switch fastingManager.fastingState {
+        case .notStarted:
+            return "Let's get started"
+        case .fasting:
+            return "You are now fasting"
+        case .feeding:
+            return "You are now feeding"
+        }
+    }
+    
     var body: some View {
         timeHeader()
     }
