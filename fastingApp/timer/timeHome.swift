@@ -33,6 +33,11 @@ struct TimeHome: View {
     var content: some View {
         ZStack {
             VStack(spacing: 40) {
+                // Title
+                Text(title)
+                    .font(.headline)
+                    .foregroundColor(.white)
+                
                 // Fasting Plan
                 Text("16:8")
                     .bold()
@@ -70,7 +75,7 @@ struct TimeHome: View {
                 }
                 
                 Button{
-                    
+                    fastingManager.toggleFastingState()
                 } label: {
                     Text(fastingManager.fastingState == .fasting ? "End fast" : "Start fasting")
                         .font(.title3).bold()
