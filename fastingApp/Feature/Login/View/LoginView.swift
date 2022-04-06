@@ -16,6 +16,10 @@ struct LoginView: View {
     
     var body: some View {
         VStack(spacing: 16) {
+            Image("login")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(height: UIScreen.main.bounds.height / 3.5)
             VStack(spacing: 16) {
                 InputTextFieldView(text: $vm.credentials.email,
                                    placeholder: "Email",
@@ -26,36 +30,43 @@ struct LoginView: View {
                                    placeholder: "Password",
                                    sfSymbol: "lock")
             }
+            
+            VStack(spacing:20){
+                ButtonView(title: "Login"){
+                    vm.login()
+                }
+                ButtonView(title: "Register",
+                           background: .clear,
+                           foreground: .green,
+                           border: .green){
+                    showRegistration.toggle()
+                }
+                        .sheet(isPresented: $showRegistration, content: {
+                               RegisterView()
+                               
+                })
+            }
             HStack {
                 Spacer()
                 Button(action: {
                     showForgotPassword.toggle()
                 }, label: { Text("Forgot Password")
                 })
-                    .font(.system(size: 16, weight: .bold))
-                    .sheet(isPresented: $showForgotPassword, content: {
-                        ForgotPasswordView()
-                    })
-            }
-            VStack(spacing:16){
-                ButtonView(title: "Login"){
-                    vm.login()
-                }
-                ButtonView(title: "Register",
-                           background: .clear,
-                           foreground: .blue,
-                           border: .blue){
-                    showRegistration.toggle()
-                }
-                           .sheet(isPresented: $showRegistration, content: {
-                               RegisterView()
-                               
-                })
+
+                    .font(.system(size: 15, weight: .bold))
+                    
+                   
             }
         }
         
-        .padding(.horizontal,15)
+        .sheet(isPresented: $showForgotPassword, content: {
+            ForgotPasswordView()
+            
+        })
+       
+        .padding(.horizontal,30)
         .navigationTitle("Login")
+        
         .alert(isPresented: $vm.hasError,
                content: {
             if case .failed(let error) = vm.state {
@@ -69,7 +80,6 @@ struct LoginView: View {
         })
     }
 }
-
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()

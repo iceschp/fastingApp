@@ -17,9 +17,9 @@ struct ButtonView: View {
     let border: Color
     let handler: ActionHandler
     
-    private let cornerRadius: CGFloat = 10
+    private let cornerRadius: CGFloat = 25
     internal init(title:String,
-                  background: Color = .blue,
+                  background: Color = .green,
                   foreground: Color = .white,
                   border: Color = .clear,
                   handler: @escaping ButtonView.ActionHandler){
@@ -50,8 +50,8 @@ struct ButtonComponentView_Previews: PreviewProvider {
             .preview(with: "Primary Button View")
             ButtonView(title: "Secondary Button",
                        background: .clear,
-                       foreground: .blue,
-                       border: .blue){ }
+                       foreground: .green,
+                       border: .green){ }
             .preview(with: "Primary Button View")
         }
     }

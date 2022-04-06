@@ -10,10 +10,18 @@ import SwiftUI
 struct HomeView: View {
     @EnvironmentObject var sessionSservice: SessionServiceImpl
     var body: some View {
+       
         VStack(alignment: .leading,
-               spacing: 16){
+               spacing: 30){
+            VStack{
+                Image("Profile")
+                
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height: UIScreen.main.bounds.height / 4)
+            }
             
-            VStack(alignment: .leading, spacing: 16) {
+            VStack(alignment: .leading, spacing: 20) {
                 Text("First Name: \(sessionSservice.userDetails?.firstName ?? "N/A")")
             Text("Last Name: \(sessionSservice.userDetails?.lastName ?? "N/A")")
             Text("Occupation:\(sessionSservice.userDetails?.occupation ?? "N/A")")

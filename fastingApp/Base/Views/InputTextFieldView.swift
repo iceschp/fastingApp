@@ -12,8 +12,8 @@ struct InputTextFieldView: View {
     let placeholder :String
     let keyboardType : UIKeyboardType
     let sfSymbol: String?
-    
-    private let textFieldLeading: CGFloat = 30
+
+    private let textFieldLeading: CGFloat = 40
     
     var body: some View {
         VStack {
@@ -27,11 +27,11 @@ struct InputTextFieldView: View {
                             Image (systemName: systemImage)
                                 .font(.system(size: 16, weight: .semibold))
                                 .padding(.leading,5)
-                                .foregroundColor(Color.gray.opacity(0.5))
+                                .foregroundColor(Color.orange)
                         }
                         RoundedRectangle(cornerRadius: 10,
                                          style: .continuous)
-                            .stroke(Color.gray.opacity(0.25))
+                            .stroke(Color.orange)
                     }
                 )
         }
@@ -54,7 +54,6 @@ struct InputTextFieldView_Previews: PreviewProvider {
                                 keyboardType: .default,
                                 sfSymbol: nil)
                 .preview(with: "Frist Name Text Input with sfsymbol")
-            
         }
     }
 }

@@ -22,11 +22,11 @@ struct InputPasswordView: View {
                         Image(systemName:systemImage)
                         .font(.system(size: 16, weight: .semibold))
                         .padding(.leading, 5)
-                        .foregroundColor(Color.gray.opacity(0.5))
+                        .foregroundColor(Color.orange)
                         
                     }
                     RoundedRectangle(cornerRadius: 10, style: .continuous)
-                        .stroke(Color.gray.opacity(0.25))
+                        .stroke(Color.orange)
                                 
                         }
                     
