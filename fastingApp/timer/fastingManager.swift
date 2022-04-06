@@ -53,11 +53,11 @@ class FastingManager: ObservableObject {
     @Published private(set) var progress: Double = 0.0
     
     var fastingTime: Double {
-        return fastingPlan.fastingPeriod
+        return fastingPlan.fastingPeriod * 60 * 60
     }
     
     var feedingTime: Double {
-        return 24 - fastingPlan.fastingPeriod
+        return (24 - fastingPlan.fastingPeriod) * 60 * 60
     }
     
     init() {
@@ -76,7 +76,7 @@ class FastingManager: ObservableObject {
         print("scheduledTime", scheduledTime.formatted(.dateTime.month().day().hour().minute().second()))
         
         startTime = scheduledTime
-        endTime = scheduledTime.addingTimeInterval(FastingPlan.intermediate.fastingPeriod)
+        endTime = scheduledTime.addingTimeInterval(FastingPlan.intermediate.fastingPeriod * 60 * 60)
     }
     
     func toggleFastingState() {
