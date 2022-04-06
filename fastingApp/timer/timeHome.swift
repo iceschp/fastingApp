@@ -53,6 +53,7 @@ struct TimeHome: View {
             VStack(spacing: 40) {
                 // Progress ring
                 ProgressRing()
+                    .environmentObject(fastingManager)
                 
                 HStack(spacing: 60) {
                     // Start time
