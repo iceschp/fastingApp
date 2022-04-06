@@ -30,28 +30,40 @@ struct ProgressRing: View {
                 .animation(.easeInOut(duration: 1.0), value: progress)
             
             VStack(spacing: 30) {
-                // Elapsed Time
-                VStack (spacing: 5) {
-                    Text("Elapsed time")
-                        .opacity(0.7)
-                    
-                    Text(fastingManager.startTime, style: .timer)
-                        .font(.title).bold()
-                }
-                .padding(.top)
-                // Remaining Time
-                VStack (spacing: 5) {
-                    if !fastingManager.elapsed {
-                        Text("Remaining time")
+                if fastingManager.fastingState == .notStarted {
+                    //                    Upcoming fast
+                    VStack (spacing: 5) {
+                        Text("Upcoming fast")
                             .opacity(0.7)
-                    } else {
-                        Text("Extra time")
-                            .opacity(0.7)
+                        
+                        Text("\(fastingManager.fastingPlan.fastingPeriod.formatted()) Hours")
+                            .font(.title).bold()
                     }
-                    
-                    Text(fastingManager.endTime, style: .timer)
-                        .font(.title2).bold()
+                } else {
+                    // Elapsed Time
+                    VStack (spacing: 5) {
+                        Text("Elapsed time")
+                            .opacity(0.7)
+                        
+                        Text(fastingManager.startTime, style: .timer)
+                            .font(.title).bold()
+                    }
+                    .padding(.top)
+                    // Remaining Time
+                    VStack (spacing: 5) {
+                        if !fastingManager.elapsed {
+                            Text("Remaining time")
+                                .opacity(0.7)
+                        } else {
+                            Text("Extra time")
+                                .opacity(0.7)
+                        }
+                        
+                        Text(fastingManager.endTime, style: .timer)
+                            .font(.title2).bold()
+                    }
                 }
+                
             }
         }
         .frame(width: 250, height: 250)
