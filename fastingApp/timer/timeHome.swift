@@ -39,7 +39,7 @@ struct TimeHome: View {
                     .foregroundColor(.white)
                 
                 // Fasting Plan
-                Text("16:8")
+                Text(fastingManager.fastingPlan.rawValue)
                     .bold()
                     .padding(.horizontal, 24)
                     .padding(.vertical, 8)
@@ -60,7 +60,7 @@ struct TimeHome: View {
                         Text(fastingManager.fastingState == .notStarted ? "Start" : "Started")
                             .opacity(0.7)
                         
-                        Text(Date(), format: .dateTime.weekday().hour().minute().second())
+                        Text(fastingManager.startTime, format: .dateTime.weekday().hour().minute().second())
                             .bold()
                     }
                     
@@ -69,7 +69,7 @@ struct TimeHome: View {
                         Text(fastingManager.fastingState == .notStarted ? "End" : "Ends")
                             .opacity(0.7)
                         
-                        Text(Date().addingTimeInterval(16), format: .dateTime.weekday().hour().minute().second())
+                        Text(fastingManager.endTime, format: .dateTime.weekday().hour().minute().second())
                             .bold()
                     }
                 }
