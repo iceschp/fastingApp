@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProgressRing: View {
     @EnvironmentObject var fastingManager: FastingManager
-    @State var progress = 0.5
+    
     let timer = Timer
         .publish(every: 1, on: .main, in: .common)
         .autoconnect()
@@ -24,10 +24,10 @@ struct ProgressRing: View {
             
             // Colored Ring
             Circle()
-                .trim(from: 0.0, to: min(progress, 1.0))
+                .trim(from: 0.0, to: min(fastingManager.progress, 1.0))
                 .stroke(Color.init(uiColor: UIColor(red: 0.937, green: 0.89, blue: 0.298, alpha: 1)), style: StrokeStyle(lineWidth: 15.0, lineCap: .round, lineJoin: .round))
                 .rotationEffect(Angle(degrees: 270))
-                .animation(.easeInOut(duration: 1.0), value: progress)
+                .animation(.easeInOut(duration: 1.0), value: fastingManager.progress)
             
             VStack(spacing: 30) {
                 if fastingManager.fastingState == .notStarted {
@@ -42,7 +42,7 @@ struct ProgressRing: View {
                 } else {
                     // Elapsed Time
                     VStack (spacing: 5) {
-                        Text("Elapsed time")
+                        Text("Elapsed time (\(fastingManager.progress.formatted(.percent)))")
                             .opacity(0.7)
                         
                         Text(fastingManager.startTime, style: .timer)
@@ -52,7 +52,7 @@ struct ProgressRing: View {
                     // Remaining Time
                     VStack (spacing: 5) {
                         if !fastingManager.elapsed {
-                            Text("Remaining time")
+                            Text("Remaining time (\((1 - fastingManager.progress).formatted(.percent)))")
                                 .opacity(0.7)
                         } else {
                             Text("Extra time")
@@ -68,9 +68,9 @@ struct ProgressRing: View {
         }
         .frame(width: 250, height: 250)
         .padding()
-        .onAppear {
-            progress = 1
-        }
+//        .onAppear {
+//            fastingManager.progress = 1
+//        }
         .onReceive(timer) { _ in
             fastingManager.track()
         }
