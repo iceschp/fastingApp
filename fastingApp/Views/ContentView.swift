@@ -157,7 +157,6 @@ struct Menu: Identifiable {
 }
 
 var menus = [
-    
     Menu(name: "Diet Meal", subMenu: "เมนูอาหารไทย", caption: "รวบรวมมากกว่า 200 เมนู", icon: "🥑"),
     Menu(name: "Drink Water", subMenu: "ดื่มน้ำ", caption: "Stay hydrated", icon: "🥛"),
     Menu(name: "Saved Menus", subMenu: "เมนูที่ถูกบันทึกไว้", caption: "เมนูอาหารไทยที่บันทึกไว้", icon: "❤️"),
