@@ -24,6 +24,11 @@
 		17098D8627EE1B5B0082E137 /* ForgotPasswordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17098D8527EE1B5B0082E137 /* ForgotPasswordService.swift */; };
 		17098D8927EE1D2D0082E137 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17098D8827EE1D2D0082E137 /* ForgotPasswordViewModel.swift */; };
 		170D3F7A280015DB00E57F31 /* FormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170D3F79280015DB00E57F31 /* FormModel.swift */; };
+		170D3F7D28007EAC00E57F31 /* FormContentBuilderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170D3F7C28007EAB00E57F31 /* FormContentBuilderImpl.swift */; };
+		170D3F80280081FA00E57F31 /* UICollectionView+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170D3F7F280081F900E57F31 /* UICollectionView+Identifier.swift */; };
+		170D3F82280082E800E57F31 /* UICollectionViewCell+CleanUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170D3F81280082E800E57F31 /* UICollectionViewCell+CleanUp.swift */; };
+		170D3F852800841B00E57F31 /* FormButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170D3F842800841B00E57F31 /* FormButtonCollectionViewCell.swift */; };
+		170D3F8728008D4100E57F31 /* FormTextCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170D3F8628008D4000E57F31 /* FormTextCollectionViewCell.swift */; };
 		17988D5A27E82B230028BEA0 /* Pods_fastingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE5F7D23E9923A0467174CBB /* Pods_fastingApp.framework */; };
 		17988D5B27E82B230028BEA0 /* Pods_fastingApp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FE5F7D23E9923A0467174CBB /* Pods_fastingApp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		17D3CF2A27EC1740008C8F09 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D3CF2927EC1740008C8F09 /* ForgotPasswordView.swift */; };
@@ -66,6 +71,11 @@
 		17098D8527EE1B5B0082E137 /* ForgotPasswordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordService.swift; sourceTree = "<group>"; };
 		17098D8827EE1D2D0082E137 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		170D3F79280015DB00E57F31 /* FormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormModel.swift; sourceTree = "<group>"; };
+		170D3F7C28007EAB00E57F31 /* FormContentBuilderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormContentBuilderImpl.swift; sourceTree = "<group>"; };
+		170D3F7F280081F900E57F31 /* UICollectionView+Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Identifier.swift"; sourceTree = "<group>"; };
+		170D3F81280082E800E57F31 /* UICollectionViewCell+CleanUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+CleanUp.swift"; sourceTree = "<group>"; };
+		170D3F842800841B00E57F31 /* FormButtonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormButtonCollectionViewCell.swift; sourceTree = "<group>"; };
+		170D3F8628008D4000E57F31 /* FormTextCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextCollectionViewCell.swift; sourceTree = "<group>"; };
 		172D549A27E4E03300F5240F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		17988D4227E8256A0028BEA0 /* FirebaseStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17988D4B27E828F10028BEA0 /* FirebaseAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -252,6 +262,9 @@
 		170D3F77280015A800E57F31 /* Dynamic Form */ = {
 			isa = PBXGroup;
 			children = (
+				170D3F83280083B000E57F31 /* CollectionViewCells */,
+				170D3F7E280081B400E57F31 /* Extensions */,
+				170D3F7B28007E5F00E57F31 /* Form Content */,
 				170D3F78280015BF00E57F31 /* Model */,
 			);
 			path = "Dynamic Form";
@@ -263,6 +276,32 @@
 				170D3F79280015DB00E57F31 /* FormModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		170D3F7B28007E5F00E57F31 /* Form Content */ = {
+			isa = PBXGroup;
+			children = (
+				170D3F7C28007EAB00E57F31 /* FormContentBuilderImpl.swift */,
+			);
+			path = "Form Content";
+			sourceTree = "<group>";
+		};
+		170D3F7E280081B400E57F31 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				170D3F7F280081F900E57F31 /* UICollectionView+Identifier.swift */,
+				170D3F81280082E800E57F31 /* UICollectionViewCell+CleanUp.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		170D3F83280083B000E57F31 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				170D3F842800841B00E57F31 /* FormButtonCollectionViewCell.swift */,
+				170D3F8628008D4000E57F31 /* FormTextCollectionViewCell.swift */,
+			);
+			path = CollectionViewCells;
 			sourceTree = "<group>";
 		};
 		17D3CF2B27EC17A7008C8F09 /* Forgot Password */ = {
@@ -505,19 +544,24 @@
 				17098D8927EE1D2D0082E137 /* ForgotPasswordViewModel.swift in Sources */,
 				17D3CF3727EC281A008C8F09 /* RegistrationViewModel.swift in Sources */,
 				17D3CF3D27EDA093008C8F09 /* SessionService.swift in Sources */,
+				170D3F8728008D4100E57F31 /* FormTextCollectionViewCell.swift in Sources */,
 				1704B25D27EABA6C0008FBD7 /* InputPasswordView.swift in Sources */,
 				17098D8327EE16920082E137 /* LoginCredentials.swift in Sources */,
 				17D3CF3A27ED9F82008C8F09 /* SessionUserDetails.swift in Sources */,
+				170D3F7D28007EAC00E57F31 /* FormContentBuilderImpl.swift in Sources */,
 				1704B26727EB13E00008FBD7 /* CloseModifier.swift in Sources */,
 				1704B26B27EB23AE0008FBD7 /* HomeView.swift in Sources */,
 				17D3CF3127EC2053008C8F09 /* RegistrationDetails.swift in Sources */,
+				170D3F852800841B00E57F31 /* FormButtonCollectionViewCell.swift in Sources */,
 				1704B25C27EABA670008FBD7 /* InputTextFieldView.swift in Sources */,
 				1704B25A27EABA210008FBD7 /* ContentView.swift in Sources */,
 				17098D7E27EE10D20082E137 /* LoginService.swift in Sources */,
 				1704B25927EABA0F0008FBD7 /* fastingAppApp.swift in Sources */,
+				170D3F82280082E800E57F31 /* UICollectionViewCell+CleanUp.swift in Sources */,
 				17098D8627EE1B5B0082E137 /* ForgotPasswordService.swift in Sources */,
 				1704B26527EB10AE0008FBD7 /* RegisterView.swift in Sources */,
 				1704B26027EAFC870008FBD7 /* ButtonView.swift in Sources */,
+				170D3F80280081FA00E57F31 /* UICollectionView+Identifier.swift in Sources */,
 				17098D8127EE14A60082E137 /* LoginViewModel.swift in Sources */,
 				1704B25827EAB9FB0008FBD7 /* LoginView.swift in Sources */,
 			);
