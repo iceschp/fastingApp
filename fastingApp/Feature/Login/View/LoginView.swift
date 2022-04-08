@@ -19,7 +19,7 @@ struct LoginView: View {
             Image("login")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(height: UIScreen.main.bounds.height / 3.5)
+                .frame(height: UIScreen.main.bounds.height / 4)
             VStack(spacing: 16) {
                 InputTextFieldView(text: $vm.credentials.email,
                                    placeholder: "Email",
@@ -66,7 +66,6 @@ struct LoginView: View {
        
         .padding(.horizontal,30)
         .navigationTitle("Login")
-        
         .alert(isPresented: $vm.hasError,
                content: {
             if case .failed(let error) = vm.state {
