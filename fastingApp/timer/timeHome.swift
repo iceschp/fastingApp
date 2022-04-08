@@ -23,8 +23,7 @@ struct TimeHome: View {
     
     var body: some View {
         ZStack {
-            Color(UIColor(red: 0.945, green: 0.659, blue: 0.745, alpha: 1))
-                .ignoresSafeArea()
+            Color(.white).ignoresSafeArea()
             
             content
         }
@@ -32,28 +31,43 @@ struct TimeHome: View {
     
     var content: some View {
         ZStack {
-            VStack(spacing: 40) {
+            VStack(spacing: 30) {
+                Text("Timer")
+                    .font(.system(size: 25)).bold()
+                
                 // Title
                 Text(title)
                     .font(.headline)
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
                 
                 // Fasting Plan
                 Text(fastingManager.fastingPlan.rawValue)
                     .bold()
                     .padding(.horizontal, 24)
-                    .padding(.vertical, 8)
-                    .background(.thinMaterial)
+                    .padding(.vertical, 10)
+                    .background(Color.init(uiColor: UIColor(red: 0.851, green: 0.953, blue: 0.996, alpha: 1)))
                     .cornerRadius(20)
                 
                 Spacer()
             }
             .padding()
             
-            VStack(spacing: 40) {
+            VStack(spacing: 20) {
                 // Progress ring
                 ProgressRing()
                     .environmentObject(fastingManager)
+                
+                Button {
+                    fastingManager.toggleFastingState()
+                } label: {
+                    Text(fastingManager.fastingState == .fasting ? "End fast" : "Start fasting")
+                        .font(.title3).bold()
+                        .padding(.horizontal, 30)
+                        .padding(.vertical, 10)
+                        .foregroundColor(.white)
+                        .background(Color.init(uiColor: UIColor(red: 0.922, green: 0.38, blue: 0.239, alpha: 1)))
+                        .cornerRadius(20)
+                }
                 
                 HStack(spacing: 60) {
                     // Start time
@@ -74,21 +88,10 @@ struct TimeHome: View {
                             .bold()
                     }
                 }
-                
-                Button{
-                    fastingManager.toggleFastingState()
-                } label: {
-                    Text(fastingManager.fastingState == .fasting ? "End fast" : "Start fasting")
-                        .font(.title3).bold()
-                        .padding(.horizontal, 24)
-                        .padding(.vertical, 8)
-                        .background(.thinMaterial)
-                        .cornerRadius(20)
-                }
             }
             .padding()
         }
-        .foregroundColor(.white)
+        .foregroundColor(.black)
     }
 }
 
