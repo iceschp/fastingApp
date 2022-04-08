@@ -32,9 +32,6 @@ struct TimeHome: View {
     var content: some View {
         ZStack {
             VStack(spacing: 30) {
-                Text("Timer")
-                    .font(.system(size: 25)).bold()
-                
                 // Title
                 Text(title)
                     .font(.headline)
@@ -52,7 +49,7 @@ struct TimeHome: View {
             }
             .padding()
             
-            VStack(spacing: 20) {
+            VStack(spacing: 30) {
                 // Progress ring
                 ProgressRing()
                     .environmentObject(fastingManager)
