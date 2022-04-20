@@ -5,6 +5,7 @@
 //  Created by Milk Jiraporn on 8/4/2565 BE.
 //
 
+
 import Foundation
 
 final class FormContentBuilderImpl {
@@ -12,15 +13,13 @@ final class FormContentBuilderImpl {
     var content: [FormSectionComponent] {
         
         return [
-            
-            FormSectionComponent(item: [
-                
-                TextFormComponent(placeholder: ""),
-                TextFormComponent(placeholder: ""),
+            FormSectionComponent(items: [
+                TextFormComponent(placeholder: "First Name"),
+                TextFormComponent(placeholder: "Last Name"),
                 TextFormComponent(placeholder: "Email",
-                                  keyboardType: .emailAddress),
-                DateComponent(mode: .date),
-                ButtonComponent(title: "Confirm")
+                             keyboardType: .emailAddress),
+                DateFormComponent(mode: .date),
+                ButtonFormItem(title: "Confirm")
             ])
         ]
     }

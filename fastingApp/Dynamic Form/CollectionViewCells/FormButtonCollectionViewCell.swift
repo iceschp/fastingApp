@@ -17,7 +17,7 @@ final class FormButtonCollectionViewCell: UICollectionViewCell {
         return btn
     }()
     func bind(_ item: FormComponent) {
-        guard let item = item as? ButtonFormComponent else {return}
+        guard let item = item as? ButtonFormItem else {return}
         setup (item: item)
     }
     override func prepareForReuse() {
@@ -26,7 +26,7 @@ final class FormButtonCollectionViewCell: UICollectionViewCell {
     }
 }
 private extension FormButtonCollectionViewCell {
-    func setup(item: ButtonFormComponent){
+    func setup(item: ButtonFormItem ){
         actionBtn.setTitle(item.title, for: .normal)
         contentView.addSubview(actionBtn)
         

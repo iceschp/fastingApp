@@ -13,13 +13,21 @@ struct HomeView: View {
        
         VStack(alignment: .leading,
                spacing: 30){
-            VStack{
-                Image("Profile")
-                
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(height: UIScreen.main.bounds.height / 4)
+            VStack {
+                HStack {
+                    Image("Profile")
+                    
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width:200)
+                        .padding(70)
+                }
+               
             }
+          
+                
+        
+           
             
             VStack(alignment: .leading, spacing: 20) {
                 Text("First Name: \(sessionSservice.userDetails?.firstName ?? "N/A")")

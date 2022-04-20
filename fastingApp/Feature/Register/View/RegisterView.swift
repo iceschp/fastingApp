@@ -26,16 +26,24 @@ struct RegisterView: View {
         
       Divider()
                     InputTextFieldView(text: $vm.userDetails.firstName,
-                                       placeholder: "First Name",
+                                       placeholder: "ชื่อ",
                                        keyboardType: .namePhonePad,
                                        sfSymbol: nil)
                     
                     InputTextFieldView(text: $vm.userDetails.lastName,
-                                       placeholder: "Last Name",
+                                       placeholder: "นามสกุล",
                                        keyboardType: .namePhonePad,
                                        sfSymbol: nil)
                     InputTextFieldView(text: $vm.userDetails.occupation,
-                                       placeholder: "Occupation",
+                                       placeholder: "น้ำหนัก",
+                                       keyboardType: .namePhonePad,
+                                       sfSymbol: nil)
+                    InputTextFieldView(text: $vm.userDetails.occupation,
+                                       placeholder: "ส่วนสูง",
+                                       keyboardType: .namePhonePad,
+                                       sfSymbol: nil)
+                    InputTextFieldView(text: $vm.userDetails.occupation,
+                                       placeholder: "เพศ",
                                        keyboardType: .namePhonePad,
                                        sfSymbol: nil)
         }

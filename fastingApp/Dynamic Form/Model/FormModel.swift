@@ -5,77 +5,96 @@
 //  Created by Milk Jiraporn on 8/4/2565 BE.
 //
 
-import Foundation
-import Alamofire
-import ModelIO
+
 import UIKit
 
 protocol FormItem {
-    var id: UUID {get}
+    var id: UUID { get }
 }
 
 protocol FormSectionItem {
-    var id:UUID {get}
-    var item : [FormComponent] {get}
-    init(item:[FormComponent])
+    var id: UUID { get }
+    var items: [FormComponent] { get }
+    init(items: [FormComponent])
 }
 
-// Section Component
+/**
+ * Component for a form section the form
+ */
 
-    final class FormSectionComponent: FormSectionItem, Hashable {
-        var id: UUID = UUID()
-        var item: [FormComponent]
-        
-        init(item: [FormComponent]) {
-            self.item = item
-        }
-        func hash(into hasher: inout Hasher) {
-            hasher.combine(id)
-        }
-        static func == (lhs: FormSectionComponent, rhs: FormSectionComponent)-> Bool {
-            lhs.id == rhs.id
-        }
+final class FormSectionComponent: FormSectionItem, Hashable {
+
+    var id: UUID = UUID()
+    var items: [FormComponent]
+
+    required init(items: [FormComponent]) {
+        self.items = items
     }
     
-
-// Form Component
-class FormComponent {
-    var id: UUID = UUID()
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
     }
+  
+    static func == (lhs: FormSectionComponent, rhs: FormSectionComponent) -> Bool {
+        lhs.id == rhs.id
+    }
+}
+
+/**
+ * Component for a form items the form
+ */
+
+class FormComponent: FormItem, Hashable {
+
+    let id = UUID()
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
     static func == (lhs: FormComponent, rhs: FormComponent) -> Bool {
         lhs.id == rhs.id
     }
 }
-// Text Component
+
+/**
+ * Component for a text item in the form
+ */
 
 final class TextFormComponent: FormComponent {
+   
     let placeholder: String
     let keyboardType: UIKeyboardType
     
     init(placeholder: String,
-         keyboardType: UIKeyboardType = .default) {
+        keyboardType: UIKeyboardType = .default) {
         self.placeholder = placeholder
         self.keyboardType = keyboardType
     }
 }
 
-// Date Component
+/**
+ * Component for a date item in the form
+ */
 
-final class DateComponent: FormComponent {
+final class DateFormComponent: FormComponent {
+
     let mode: UIDatePicker.Mode
-    init(mode: UIDatePicker.Mode){
+    
+    init(mode: UIDatePicker.Mode) {
         self.mode = mode
     }
 }
-// Button Component
 
-final class ButtonFormComponent: FormComponent{
-    
+/**
+ * Component for a button item in the form
+ */
+
+final class ButtonFormItem: FormComponent {
+
     let title: String
     
-    init(title:String){
+    init(title: String) {
         self.title = title
     }
 }

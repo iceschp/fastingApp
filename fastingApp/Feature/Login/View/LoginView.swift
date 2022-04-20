@@ -13,13 +13,15 @@ struct LoginView: View {
     @StateObject private var vm = LoginViewModelImpl(
         service: LoginServiceImpl()
     )
-    
+        
     var body: some View {
         VStack(spacing: 16) {
+            clipShape(RoundedRectangle(cornerRadius: 20))
             Image("login")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(height: UIScreen.main.bounds.height / 4)
+                
             VStack(spacing: 16) {
                 InputTextFieldView(text: $vm.credentials.email,
                                    placeholder: "Email",
