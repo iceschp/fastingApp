@@ -10,7 +10,6 @@ import SwiftUI
 struct CategoryRow: View {
     var body: some View {
         VStack(alignment: .leading) {
-            
             ScrollView(.horizontal, showsIndicators: true) {
                 HStack(alignment: .top, spacing: 0) {
                     CategoryItem()

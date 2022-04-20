@@ -49,7 +49,7 @@ struct CustomTabView: View {
                 }
             }
             .padding(.horizontal,25)
-            .padding(.vertical,5)
+//            .padding(.vertical,5)
             .background(Color.init(uiColor: UIColor(red: 0.922, green: 0.38, blue: 0.239, alpha: 1)))
         }
     }
@@ -85,7 +85,7 @@ struct Header: View {
                         .foregroundColor(.white)
                 }
                 Spacer(minLength: 0)
-                
+        
                 ZStack {
                     Image("picture-1")
                         .resizable()
