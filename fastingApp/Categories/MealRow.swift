@@ -49,10 +49,8 @@ struct MealRow: View {
 
 struct MealRow_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            MealRow(meal: meals[0])
-            MealRow(meal: meals[1])
-        }
-        .previewLayout(.fixed(width: 350, height: 120))
+//        MealRecipe(meal: ModelData().meals[0])
+        MealRow(meal: ModelData().meals[0])
+            .environmentObject(ModelData())
     }
 }

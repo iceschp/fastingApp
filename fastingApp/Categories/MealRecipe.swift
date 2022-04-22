@@ -69,12 +69,14 @@ struct MealRecipe: View {
                 Spacer(minLength: 0)
                 
                 VStack (spacing: 10) {
-                    HStack (spacing: 160) {
+                    HStack {
                         VStack (alignment: .leading, spacing: 10) {
                             Text("วัตถุดิบและส่วนผสม")
                                 .font(.system(size: 16)).bold()
                                 .foregroundColor(Color.init(uiColor: UIColor(red: 0.922, green: 0.38, blue: 0.239, alpha: 1)))
                         }
+                        
+                        Spacer()
                         
                         VStack (alignment: .trailing, spacing: 10) {
                             Text("จำนวน")
@@ -82,8 +84,9 @@ struct MealRecipe: View {
                                 .foregroundColor(Color.init(uiColor: UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)))
                         }
                     }
+                    .padding(.horizontal)
                     
-                    HStack (spacing: 200) {
+                    HStack {
                         VStack (alignment: .leading, spacing: 10) {
                             Group {
                                 Text(meal.ingredient1)
@@ -96,6 +99,8 @@ struct MealRecipe: View {
                             }
                             .font(.system(size: 12))
                         }
+                        
+                        Spacer()
                         
                         VStack (alignment: .trailing, spacing: 10) {
                             Group {
@@ -110,6 +115,7 @@ struct MealRecipe: View {
                             .font(.system(size: 12))
                         }
                     }
+                    .padding(.horizontal)
                     
                     Divider()
                         .frame(width: 100)
@@ -158,8 +164,8 @@ struct MealRecipe: View {
 
 struct MealRecipe_Previews: PreviewProvider {
     static var previews: some View {
-        MealRecipe(meal: meals[0])
-        MealRecipe(meal: meals[1])
+//        MealRecipe(meal: meals[0])
+        MealRecipe(meal: ModelData().meals[0])
     }
 }
 
