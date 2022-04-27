@@ -14,7 +14,6 @@ struct CategoryHome: View {
 }
 
 struct CategoryBody: View {
-    @EnvironmentObject var modelData: ModelData
     @State var txt = ""
     
     var body: some View {
@@ -75,30 +74,19 @@ struct CategoryBody: View {
                     .cornerRadius(30)
                     .padding(.horizontal, 16)
                     
-                    VStack(alignment: .leading) {
-                        Text("เมนูที่น่าสนใจ 🔥")
-                            .font(.system(size: 20)).bold()
-                        
-//                        ForEach(modelData.meals, id: \.self) { meal in
-//                            MealRow(meal: meal)
-//                                .background(.white)
-//                                .cornerRadius(10)
-//                                .shadow(color: Color.init(uiColor: UIColor(red: 0, green: 0, blue: 0, alpha: 0.25)), radius: 2, x: 2, y: 2)
-//                        }
-//                        .padding(.bottom, 10)
-                    }
-                    .padding()
+                    RecommendMealList()
+                    
                 }
                 .background(.white).edgesIgnoringSafeArea(.all)
+                
             }
         })
         .background(Color.init(uiColor: UIColor(red: 0.176, green: 0.412, blue: 0.282, alpha: 1)))
     }
 }
 
-struct MenusPlanView_Previews: PreviewProvider {
+struct CategoryHome_Previews: PreviewProvider {
     static var previews: some View {
         CategoryHome()
-            .environmentObject(ModelData())
     }
 }

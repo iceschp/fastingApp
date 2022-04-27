@@ -164,8 +164,7 @@ struct MealRecipe: View {
 
 struct MealRecipe_Previews: PreviewProvider {
     static var previews: some View {
-//        MealRecipe(meal: meals[0])
-        MealRecipe(meal: ModelData().meals[0])
+        MealRecipe(meal: meals[0])
     }
 }
 

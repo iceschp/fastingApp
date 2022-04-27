@@ -17,6 +17,7 @@
 		4808E7202806CC37004A3868 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4808E71F2806CC37004A3868 /* Meal.swift */; };
 		4808E7222806CD07004A3868 /* mealData.json in Resources */ = {isa = PBXBuildFile; fileRef = 4808E7212806CD07004A3868 /* mealData.json */; };
 		481FC2DF27F451C90097BC0E /* TimeHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481FC2DE27F451C90097BC0E /* TimeHome.swift */; };
+		4848F0112813F31900CE22F2 /* AllMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4848F0102813F31900CE22F2 /* AllMeal.swift */; };
 		486E171A27D067CB001B2106 /* fastingAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E171927D067CB001B2106 /* fastingAppApp.swift */; };
 		486E171C27D067CB001B2106 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E171B27D067CB001B2106 /* ContentView.swift */; };
 		486E171E27D067CD001B2106 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 486E171D27D067CD001B2106 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 		4870F41928071F5C00A79CBD /* MealRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4870F41828071F5C00A79CBD /* MealRow.swift */; };
 		4870F41B2807297500A79CBD /* MealList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4870F41A2807297500A79CBD /* MealList.swift */; };
 		48888DB928008353001A0184 /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48888DB828008353001A0184 /* CategoryItem.swift */; };
+		48AB40C92812AAC500082682 /* RecommendMealList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AB40C82812AAC500082682 /* RecommendMealList.swift */; };
 		48CC5BA527EC230400341151 /* CategoryHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CC5BA427EC230400341151 /* CategoryHome.swift */; };
 		48F54C5F27F829F70048C379 /* ProgressRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F54C5E27F829F70048C379 /* ProgressRing.swift */; };
 		48F54C6127F8360A0048C379 /* FastingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F54C6027F8360A0048C379 /* FastingManager.swift */; };
@@ -42,6 +44,7 @@
 		4808E71F2806CC37004A3868 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		4808E7212806CD07004A3868 /* mealData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mealData.json; sourceTree = "<group>"; };
 		481FC2DE27F451C90097BC0E /* TimeHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeHome.swift; sourceTree = "<group>"; };
+		4848F0102813F31900CE22F2 /* AllMeal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMeal.swift; sourceTree = "<group>"; };
 		486E171627D067CB001B2106 /* fastingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fastingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		486E171927D067CB001B2106 /* fastingAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fastingAppApp.swift; sourceTree = "<group>"; };
 		486E171B27D067CB001B2106 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,6 +53,7 @@
 		4870F41828071F5C00A79CBD /* MealRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRow.swift; sourceTree = "<group>"; };
 		4870F41A2807297500A79CBD /* MealList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealList.swift; sourceTree = "<group>"; };
 		48888DB828008353001A0184 /* CategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItem.swift; sourceTree = "<group>"; };
+		48AB40C82812AAC500082682 /* RecommendMealList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendMealList.swift; sourceTree = "<group>"; };
 		48CC5BA427EC230400341151 /* CategoryHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHome.swift; sourceTree = "<group>"; };
 		48F54C5E27F829F70048C379 /* ProgressRing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRing.swift; sourceTree = "<group>"; };
 		48F54C6027F8360A0048C379 /* FastingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingManager.swift; sourceTree = "<group>"; };
@@ -183,9 +187,11 @@
 				48CC5BA427EC230400341151 /* CategoryHome.swift */,
 				48FBA40127EDA3AA008D7AD3 /* CategoryRow.swift */,
 				48888DB828008353001A0184 /* CategoryItem.swift */,
+				48AB40C82812AAC500082682 /* RecommendMealList.swift */,
 				4870F41828071F5C00A79CBD /* MealRow.swift */,
 				48076F1F28088F3E00C018EB /* MealRecipe.swift */,
 				4870F41A2807297500A79CBD /* MealList.swift */,
+				4848F0102813F31900CE22F2 /* AllMeal.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -331,7 +337,9 @@
 				1703F57927E1BFFD0077B3AA /* FaceIDSwiftUIView.swift in Sources */,
 				48076F2028088F3E00C018EB /* MealRecipe.swift in Sources */,
 				48CC5BA527EC230400341151 /* CategoryHome.swift in Sources */,
+				4848F0112813F31900CE22F2 /* AllMeal.swift in Sources */,
 				1703F58027E1C62C0077B3AA /* LoginViewModel.swift in Sources */,
+				48AB40C92812AAC500082682 /* RecommendMealList.swift in Sources */,
 				481FC2DF27F451C90097BC0E /* TimeHome.swift in Sources */,
 				1703F58427E387D90077B3AA /* Home.swift in Sources */,
 				4808E7202806CC37004A3868 /* Meal.swift in Sources */,
