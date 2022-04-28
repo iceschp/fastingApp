@@ -33,10 +33,12 @@ struct MealRow: View {
                 .padding(5)
                 .background(Color.init(uiColor: UIColor(red: 0.937, green: 0.89, blue: 0.298, alpha: 1)))
                 
-                
-                Text(meal.description)
-                    .font(.system(size: 12))
-                    .foregroundColor(.black)
+                VStack {
+                    Text(meal.description)
+                        .font(.system(size: 12))
+                        .foregroundColor(.black)
+                        .multilineTextAlignment(.leading)
+                }
                 
                 
                 ZStack {
@@ -54,8 +56,8 @@ struct MealRow: View {
             .padding(.leading, 5)
             
         }
-//        .frame(minWidth: 350, maxWidth: 350, minHeight: 120, maxHeight: 120)
-//        .padding(.vertical, 10)
+        .frame(minWidth: 350, maxWidth: 350, minHeight: 120, maxHeight: 120)
+        .padding(.vertical, 10)
     }
 }
 
@@ -65,6 +67,6 @@ struct MealRow_Previews: PreviewProvider {
             MealRow(meal: meals[0])
             MealRow(meal: meals[1])
         }
-            .previewLayout(.fixed(width: 350, height: 120))
+        .previewLayout(.fixed(width: 350, height: 120))
     }
 }
