@@ -20,7 +20,7 @@ struct MealRecipe: View {
                     VStack (spacing: 20) {
                         Text(meal.name)
                             .font(.system(size: 20)).bold()
-                            .padding(.top, 10)
+//                            .padding(.top, 10)
                         
                         Text(meal.special)
                             .font(.system(size: 12))

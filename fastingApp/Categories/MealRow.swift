@@ -18,6 +18,7 @@ struct MealRow: View {
                 .frame(width: 120, height: 120)
                 .cornerRadius(20)
             
+            Spacer()
             
             VStack(alignment: .leading, spacing: 8) {
                 Text(meal.name)
@@ -52,15 +53,18 @@ struct MealRow: View {
             }
             .padding(.leading, 5)
             
-            Spacer()
         }
-        .frame(minWidth: 350, maxWidth: 350, minHeight: 120, maxHeight: 120)
-        .padding(.vertical, 10)
+//        .frame(minWidth: 350, maxWidth: 350, minHeight: 120, maxHeight: 120)
+//        .padding(.vertical, 10)
     }
 }
 
 struct MealRow_Previews: PreviewProvider {
     static var previews: some View {
-        MealRow(meal: meals[0])
+        Group {
+            MealRow(meal: meals[0])
+            MealRow(meal: meals[1])
+        }
+            .previewLayout(.fixed(width: 350, height: 120))
     }
 }

@@ -15,12 +15,14 @@ struct CategoryHome: View {
 
 struct CategoryBody: View {
     @State var txt = ""
+//    @State private var selectedOption: MenuBarOptions
     
     var body: some View {
         
         ScrollView(.vertical, showsIndicators: false, content: {
             
             VStack(alignment: .leading) {
+                
                 
                 VStack(spacing: 30) {
                     Text("วันนี้ทานอะไรดีคะ?")
@@ -74,7 +76,7 @@ struct CategoryBody: View {
                     .cornerRadius(30)
                     .padding(.horizontal, 16)
                     
-                    RecommendMealList()
+                    
                     
                 }
                 .background(.white).edgesIgnoringSafeArea(.all)

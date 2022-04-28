@@ -31,7 +31,7 @@ struct CustomTabView: View {
             TabView(selection: $selectedTab) {
                 Header()
                     .tag("home")
-                CategoryHome()
+                Draft()
                     .tag("barchart")
                 TimeHome()
                     .tag("person")

@@ -10,7 +10,35 @@ import SwiftUI
 struct RecommendMealList: View {
     
     var body: some View {
-        VStack (alignment: .leading){
+        
+        NavigationView {
+            List {
+                ForEach(meals) { meal in
+                    NavigationLink {
+                        MealRecipe(meal: meal)
+                    } label: {
+                        MealRow(meal: meal)
+                    }
+                }
+            }
+        }
+        
+        
+        
+    }
+}
+
+struct RecommendMealList_Previews: PreviewProvider {
+    static var previews: some View {
+        RecommendMealList()
+    }
+}
+
+//
+//    .background(.white)
+//    .cornerRadius(10)
+//    .shadow(color: Color.init(uiColor: UIColor(red: 0, green: 0, blue: 0, alpha: 0.25)), radius: 2, x: 2, y: 2)
+
 //            HStack {
 //                Text("เมนูที่น่าสนใจ 🔥")
 //                    .font(.system(size: 20)).bold()
@@ -27,32 +55,3 @@ struct RecommendMealList: View {
 //                    .foregroundColor(.blue)
 //                }
 //            }
-            
-            NavigationView {
-                ScrollView(showsIndicators: false) {
-                    ForEach(meals) { meal in
-                        NavigationLink {
-                            MealRecipe(meal: meal)
-                        } label: {
-                            MealRow(meal: meal)
-                        }
-                    }
-                }
-            }
-            
-        }
-        .padding()
-    }
-}
-
-struct RecommendMealList_Previews: PreviewProvider {
-    static var previews: some View {
-        RecommendMealList()
-    }
-}
-
-//
-//    .background(.white)
-//    .cornerRadius(10)
-//    .shadow(color: Color.init(uiColor: UIColor(red: 0, green: 0, blue: 0, alpha: 0.25)), radius: 2, x: 2, y: 2)
-

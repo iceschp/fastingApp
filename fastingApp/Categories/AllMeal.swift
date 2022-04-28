@@ -9,15 +9,21 @@ import SwiftUI
 
 struct AllMeal: View {
     var body: some View {
+        
         NavigationView {
-            List(meals) { meal in
-                NavigationLink {
-                    MealRecipe(meal: meal)
-                } label: {
-                    MealRow(meal: meal)
+            List {
+                ForEach(meals) { meal in
+                    NavigationLink {
+                        MealRecipe(meal: meal)
+                    } label: {
+                        MealRow(meal: meal)
+                        
+                    }
                 }
             }
+            .navigationTitle("รวมเมนูอาหารทั้งหมด")
         }
+        
     }
 }
 
