@@ -17,7 +17,6 @@
 		4808E7202806CC37004A3868 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4808E71F2806CC37004A3868 /* Meal.swift */; };
 		4808E7222806CD07004A3868 /* mealData.json in Resources */ = {isa = PBXBuildFile; fileRef = 4808E7212806CD07004A3868 /* mealData.json */; };
 		481FC2DF27F451C90097BC0E /* TimeHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481FC2DE27F451C90097BC0E /* TimeHome.swift */; };
-		482B98D128192BBD0054405A /* Draft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482B98D028192BBC0054405A /* Draft.swift */; };
 		482B98D328198D6C0054405A /* MenuBarOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482B98D228198D6B0054405A /* MenuBarOptions.swift */; };
 		4848F0112813F31900CE22F2 /* AllMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4848F0102813F31900CE22F2 /* AllMeal.swift */; };
 		486E171A27D067CB001B2106 /* fastingAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E171927D067CB001B2106 /* fastingAppApp.swift */; };
@@ -45,7 +44,6 @@
 		4808E71F2806CC37004A3868 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		4808E7212806CD07004A3868 /* mealData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mealData.json; sourceTree = "<group>"; };
 		481FC2DE27F451C90097BC0E /* TimeHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeHome.swift; sourceTree = "<group>"; };
-		482B98D028192BBC0054405A /* Draft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Draft.swift; sourceTree = "<group>"; };
 		482B98D228198D6B0054405A /* MenuBarOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarOptions.swift; sourceTree = "<group>"; };
 		4848F0102813F31900CE22F2 /* AllMeal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMeal.swift; sourceTree = "<group>"; };
 		486E171627D067CB001B2106 /* fastingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fastingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,7 +186,6 @@
 			isa = PBXGroup;
 			children = (
 				48CC5BA427EC230400341151 /* CategoryHome.swift */,
-				482B98D028192BBC0054405A /* Draft.swift */,
 				48FBA40127EDA3AA008D7AD3 /* CategoryRow.swift */,
 				48888DB828008353001A0184 /* CategoryItem.swift */,
 				48AB40C82812AAC500082682 /* RecommendMealList.swift */,
@@ -346,7 +343,6 @@
 				481FC2DF27F451C90097BC0E /* TimeHome.swift in Sources */,
 				1703F58427E387D90077B3AA /* Home.swift in Sources */,
 				4808E7202806CC37004A3868 /* Meal.swift in Sources */,
-				482B98D128192BBD0054405A /* Draft.swift in Sources */,
 				48FBA40227EDA3AA008D7AD3 /* CategoryRow.swift in Sources */,
 				48888DB928008353001A0184 /* CategoryItem.swift in Sources */,
 				486E171A27D067CB001B2106 /* fastingAppApp.swift in Sources */,
