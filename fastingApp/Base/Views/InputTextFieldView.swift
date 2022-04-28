@@ -33,13 +33,12 @@ struct InputTextFieldView: View {
                                          style: .continuous)
                             .stroke(Color.orange)
                     }
-                )
+            )
         }
     }
 }
 
 struct InputTextFieldView_Previews: PreviewProvider {
-    
     static var previews: some View {
         Group{
             InputTextFieldView( text: .constant(""),

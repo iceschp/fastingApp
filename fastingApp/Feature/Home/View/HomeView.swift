@@ -25,10 +25,6 @@ struct HomeView: View {
                
             }
           
-                
-        
-           
-            
             VStack(alignment: .leading, spacing: 20) {
                 Text("First Name: \(sessionSservice.userDetails?.firstName ?? "N/A")")
             Text("Last Name: \(sessionSservice.userDetails?.lastName ?? "N/A")")
@@ -38,10 +34,11 @@ struct HomeView: View {
                 sessionSservice.logout()
             }
         }
-        .padding(.horizontal, 16)
+        .padding(.horizontal,16)
         .navigationTitle("Main ContenView")
- }
+    }
 }
+
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView{

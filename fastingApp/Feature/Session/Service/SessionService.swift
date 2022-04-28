@@ -10,8 +10,6 @@ import Combine
 import FirebaseAuth
 import Firebase
 
-
-
 enum SessionState {
     case logedIn
     case loggedOut
@@ -72,7 +70,6 @@ private extension SessionServiceImpl {
                                                          lastName: lastName,
                                                          occupation: occupation)
             }
-                
         }
     }
 }

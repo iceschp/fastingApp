@@ -50,7 +50,6 @@ final class LoginViewModelImpl: ObservableObject, LoginViewModel {
             .store(in: &subscription)
     }
 }
-
 private extension LoginViewModelImpl {
     
     func setupErrorSubscription() {

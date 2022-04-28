@@ -24,36 +24,25 @@ class ViewController: UIViewController {
         cv.register(FormDateCollectionViewCell.self, forCellWithReuseIdentifier: FormDateCollectionViewCell.cellId)
         return cv
     }()
-    
     override func loadView() {
         super.loadView()
         setup()
         updateDataSource()
     }
 }
-
 private extension ViewController {
-    
     func updateDataSource(animated: Bool = false) {
-
         DispatchQueue.main.async { [weak self] in
-            
             guard let self = self else { return }
-            
             var snapshot = NSDiffableDataSourceSnapshot<FormSectionComponent, FormComponent>()
-            
             let formSections = self.formContentBuilder.content
             snapshot.appendSections(formSections)
             formSections.forEach { snapshot.appendItems($0.items, toSection: $0) }
-            
             self.dataSource.apply(snapshot, animatingDifferences: animated)
         }
     }
-    
     func makeDataSource() -> UICollectionViewDiffableDataSource<FormSectionComponent, FormComponent> {
-        
         return UICollectionViewDiffableDataSource(collectionView: collectionVw) { collectionVw, indexPath, item in
-            
             switch item {
             case is TextFormComponent:
                 let cell = collectionVw.dequeueReusableCell(withReuseIdentifier: FormTextCollectionViewCell.cellId,
@@ -77,21 +66,13 @@ private extension ViewController {
         }
     }
 }
-
 private extension ViewController {
-    
     func setup() {
-        
         view.backgroundColor = .white
-        
         // Setup CollectionView
-        
         collectionVw.dataSource = dataSource
-        
         // Layout
-        
         view.addSubview(collectionVw)
-        
         NSLayoutConstraint.activate([
             collectionVw.topAnchor.constraint(equalTo: view.topAnchor),
             collectionVw.bottomAnchor.constraint(equalTo: view.bottomAnchor),

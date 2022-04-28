@@ -13,14 +13,22 @@ struct LoginView: View {
     @StateObject private var vm = LoginViewModelImpl(
         service: LoginServiceImpl()
     )
-        
+    var screenWidth = UIScreen.main.bounds.width
     var body: some View {
-        VStack(spacing: 16) {
-            clipShape(RoundedRectangle(cornerRadius: 20))
+        VStack(spacing: 10) {
+            HStack (spacing: 0){
+            RoundedRectangle(cornerRadius: 10)
+                .fill(Color("Color1"))
+                .frame(width: 200, height: 150)
+            RoundedRectangle(cornerRadius: 10)
+                    .fill(Color("Color4"))
+                    .frame(width: 400, height: 150)
+            }
+            
             Image("login")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(height: UIScreen.main.bounds.height / 4)
+                .frame(width: 200, height: 200)
                 
             VStack(spacing: 16) {
                 InputTextFieldView(text: $vm.credentials.email,
@@ -32,7 +40,6 @@ struct LoginView: View {
                                    placeholder: "Password",
                                    sfSymbol: "lock")
             }
-            
             VStack(spacing:20){
                 ButtonView(title: "Login"){
                     vm.login()
@@ -45,7 +52,6 @@ struct LoginView: View {
                 }
                         .sheet(isPresented: $showRegistration, content: {
                                RegisterView()
-                               
                 })
             }
             HStack {
@@ -54,19 +60,13 @@ struct LoginView: View {
                     showForgotPassword.toggle()
                 }, label: { Text("Forgot Password")
                 })
-
                     .font(.system(size: 15, weight: .bold))
-                    
-                   
             }
         }
-        
         .sheet(isPresented: $showForgotPassword, content: {
             ForgotPasswordView()
-            
         })
-       
-        .padding(.horizontal,30)
+        .padding(.horizontal,20)
         .navigationTitle("Login")
         .alert(isPresented: $vm.hasError,
                content: {
@@ -76,7 +76,6 @@ struct LoginView: View {
             } else {
                 return Alert (
                     title: Text("Error"), message: Text("Something went wrong"))
-                
             }
         })
     }

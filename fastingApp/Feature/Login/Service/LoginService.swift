@@ -17,7 +17,6 @@ final class LoginServiceImpl: LoginService{
     func login(with credentials: LoginCredentials) -> AnyPublisher<Void,Error> {
         
         Deferred {
-            
             Future { promise in
                 Auth
                     .auth()
@@ -29,8 +28,7 @@ final class LoginServiceImpl: LoginService{
                             promise(.success(()))
                         }
                     }
-                
-            }
+             }
         }
         .receive(on: RunLoop.main)
         .eraseToAnyPublisher()

@@ -11,7 +11,6 @@ struct RegisterView: View {
     @StateObject private var  vm = RegistrationViewModelImpl(
     service: RegistrationServiceImpl()
     )
-    
     var body: some View {
         NavigationView {
             VStack(spacing: 32){
@@ -20,34 +19,26 @@ struct RegisterView: View {
                                placeholder: "Email",
                                keyboardType: .emailAddress,
                                sfSymbol: "envelope")
-            InputPasswordView(password: $vm.userDetails.password,
-                              placeholder: "Password",
-                              sfSymbol: "lock")
+                    InputPasswordView(password: $vm.userDetails.password,
+                                      placeholder: "Password",
+                                      sfSymbol: "lock")
         
       Divider()
                     InputTextFieldView(text: $vm.userDetails.firstName,
-                                       placeholder: "ชื่อ",
+                                       placeholder: "FirstName",
                                        keyboardType: .namePhonePad,
                                        sfSymbol: nil)
                     
                     InputTextFieldView(text: $vm.userDetails.lastName,
-                                       placeholder: "นามสกุล",
+                                       placeholder: "LastName",
                                        keyboardType: .namePhonePad,
                                        sfSymbol: nil)
                     InputTextFieldView(text: $vm.userDetails.occupation,
-                                       placeholder: "น้ำหนัก",
-                                       keyboardType: .namePhonePad,
-                                       sfSymbol: nil)
-                    InputTextFieldView(text: $vm.userDetails.occupation,
-                                       placeholder: "ส่วนสูง",
-                                       keyboardType: .namePhonePad,
-                                       sfSymbol: nil)
-                    InputTextFieldView(text: $vm.userDetails.occupation,
-                                       placeholder: "เพศ",
+                                       placeholder: "Occupation",
                                        keyboardType: .namePhonePad,
                                        sfSymbol: nil)
         }
-                ButtonView(title:"Sign up"){
+                ButtonView(title:"Sign Up"){
                     vm.register()
                 }
     }
@@ -62,18 +53,11 @@ struct RegisterView: View {
                 } else {
                     return Alert (
                         title: Text("Error"), message: Text("Something went wrong"))
-                    
-                }
-            })
+            }
+        })
      }
-        
-    }
+  }
 }
-
- 
-        
-
-
 struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {
         RegisterView()

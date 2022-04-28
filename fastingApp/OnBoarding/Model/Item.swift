@@ -16,8 +16,8 @@ struct Item: Identifiable {
 }
 
 let data = [
-    Item(backgroundColor: Color("Color2"), image: "image1", title: "Meow ICE", subtitle:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy " ),
-    Item(backgroundColor: Color("Color1"), image: "image2", title: "Meow MILK", subtitle:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy " ),
-    Item(backgroundColor: Color("Color4"), image: "image3", title: "Meow ICE MILK", subtitle:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy " ),
+    Item(backgroundColor: Color("Color2"), image: "image1", title: "กินนำกันเด้อ", subtitle:"เป็นแอปพลิเคชันที่เกี่ยวการทำ Intermittent Fasting หรือ IF ช่วยยกระดับการเผาผลาญไขมันให้กับร่างกาย ดังนั้นน้ำหนักจากการสะสมของไขมันจึงลดตามไปด้วย โดยหลักการเผาผลาญคือ เมื่อเราอยู่ในช่วงอดอาหาร ระดับอินซูลินจะลดลง ระดับ Growth Hormone สูงขึ้น" ),
+    Item(backgroundColor: Color("Color1"), image: "image2", title: "อาหารไทยรักสุขภาพ", subtitle:"มีอาหารไทยรักสุขภาพมากมายให้เลือก ในการลดน้ำหนักและการทำIntermittent Fasting ควบคู่กันทำให้รับประทานที่อร่อยและสุขภาพดี" ),
+    Item(backgroundColor: Color("Color4"), image: "image3", title: "ประสบการณ์การลดน้ำหนักที่ดี", subtitle:"ได้รับประสบการณ์การลดน้ำหนักแบบใหม่ ในรูปแบบที่ยังรับประทานที่แปลกใหม่และอร่อย" ),
 
 ]

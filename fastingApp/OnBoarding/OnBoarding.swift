@@ -21,8 +21,10 @@ struct OnBoarding: View {
     var lastPage = data.count - 1
     var firstPage = 0
     @Namespace var namespace
+    @State private var selection: String = ""
     
     var body: some View {
+        NavigationView {
         ZStack {
             GeometryReader { reader in
                 HStack(spacing: 0) {
@@ -61,7 +63,7 @@ struct OnBoarding: View {
                             if i == currentPage {
                                 Capsule()
                                     .matchedGeometryEffect(id: "page", in: namespace)
-                                    .frame(width: 18, height: 6)
+                                    .frame(width: 16, height: 6)
                                     .animation(.default)
                             } else {
                                 Circle()
@@ -106,6 +108,8 @@ struct OnBoarding: View {
                         .foregroundColor(.white)
                         
                     } else {
+                        //Go to LoginView
+                        NavigationLink(destination: LoginView ()){
                         Button(action: {}, label: {
                             Text("Get started")
                                 .foregroundColor(.black)
@@ -113,12 +117,17 @@ struct OnBoarding: View {
                                 .frame(maxWidth: .infinity)
                                 .frame(height: 60)
                                 .background(Capsule().fill(Color.white))
-                        })
-                    }
+                          })
+                        }
+                           }
+                        
                 }
                 .padding(.horizontal)
             }
         }
+            
+        }
+        
     }
     
     func onChanged(value: DragGesture.Value) {
@@ -148,19 +157,19 @@ struct ItemView: View {
             item.backgroundColor
                 .ignoresSafeArea()
             
-            VStack(spacing: 20) {
+            VStack(spacing: 10) {
                 Image(item.image)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .padding(.top)
                 
-                VStack(spacing: 15) {
+                VStack(spacing: 10) {
                     Text(item.title)
-                        .font(.system(size: 40, weight: .semibold))
+                        .font(.system(size: 30, weight: .semibold))
                         .animation(Animation.interpolatingSpring(stiffness: 40, damping: 8))
                     
                     Text(item.subtitle)
-                        .font(.system(size: 25, weight: .regular))
+                        .font(.system(size: 20, weight: .regular))
                         .multilineTextAlignment(.center)
                         .animation(Animation.interpolatingSpring(stiffness: 40, damping: 8))
                 }
