@@ -67,7 +67,8 @@ struct TabButton: View {
             Image(image)
                 .renderingMode(.template)
                 .foregroundColor(selectedTab == image ? Color.white : Color.black)
-                .padding()
+                .padding(.horizontal)
+                .padding(.top)
         }
     }
 }

@@ -25,32 +25,59 @@ struct MealRow: View {
                     .font(.system(size: 16)).bold()
                     .foregroundColor(.black)
                 
-                ZStack {
-                    Text(meal.special)
-                        .font(.system(size: 10)).bold()
-                        .foregroundColor(.black)
-                }
-                .padding(5)
-                .background(Color.init(uiColor: UIColor(red: 0.937, green: 0.89, blue: 0.298, alpha: 1)))
-                
-                VStack {
-                    Text(meal.description)
-                        .font(.system(size: 12))
-                        .foregroundColor(.black)
-                        .multilineTextAlignment(.leading)
-                }
-                
                 
                 ZStack {
-                    Text("\(meal.calories) กิโลแคลอรี่")
-                        .font(.system(size: 10))
-                        .foregroundColor(Color.init(uiColor: UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)))
+                    if meal.special == "เมนูพิเศษเฉพาะเดือนนี้" {
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text(meal.special)
+                                .font(.system(size: 10)).bold()
+                                .foregroundColor(.black)
+                                .padding(5)
+                                .background(Color.init(uiColor: UIColor(red: 0.937, green: 0.89, blue: 0.298, alpha: 1)))
+                            
+                            VStack {
+                                Text(meal.description)
+                                    .font(.system(size: 12))
+                                    .foregroundColor(.black)
+                                    .multilineTextAlignment(.leading)
+                            }
+                            
+                            ZStack {
+                                Text("\(meal.calories) กิโลแคลอรี่")
+                                    .font(.system(size: 10))
+                                    .foregroundColor(Color.init(uiColor: UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)))
+                            }
+                            .padding(5)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 2)
+                                    .stroke(Color.init(uiColor: UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)), lineWidth: 1)
+                            )
+                        }
+                        
+                    } else {
+                        VStack(alignment: .leading, spacing: 8) {
+                            VStack {
+                                Text(meal.description)
+                                    .font(.system(size: 12))
+                                    .foregroundColor(.black)
+                                    .multilineTextAlignment(.leading)
+                            }
+                            
+                            
+                            ZStack {
+                                Text("\(meal.calories) กิโลแคลอรี่")
+                                    .font(.system(size: 10))
+                                    .foregroundColor(Color.init(uiColor: UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)))
+                            }
+                            .padding(5)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 2)
+                                    .stroke(Color.init(uiColor: UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)), lineWidth: 1)
+                            )
+                        }
+                    }
                 }
-                .padding(5)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 2)
-                        .stroke(Color.init(uiColor: UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)), lineWidth: 1)
-                )
+                
                 
             }
             .padding(.leading, 5)
@@ -60,6 +87,7 @@ struct MealRow: View {
         .padding(.vertical, 10)
     }
 }
+
 
 struct MealRow_Previews: PreviewProvider {
     static var previews: some View {
