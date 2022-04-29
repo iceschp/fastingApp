@@ -17,6 +17,7 @@ struct Meal: Hashable, Codable, Identifiable {
     var special: String
     var carbohydrate: String
     var protein1, protein2: String
+    var thumbnail: String
     
     var ingredient1, ingredient2, ingredient3, ingredient4: String
     var ingredient5, ingredient6, ingredient7: String

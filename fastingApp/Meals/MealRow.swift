@@ -14,7 +14,7 @@ struct MealRow: View {
         HStack {
             Image("food-1")
                 .resizable()
-                .aspectRatio(1 ,contentMode: .fill)
+                .aspectRatio(1 ,contentMode: .fit)
                 .frame(width: 120, height: 120)
                 .cornerRadius(20)
             
