@@ -20,12 +20,14 @@ struct MealRecipe: View {
                     VStack (spacing: 20) {
                         Text(meal.name)
                             .font(.system(size: 20)).bold()
-//                            .padding(.top, 10)
                         
-                        Text(meal.special)
-                            .font(.system(size: 12))
-                            .padding(8)
-                            .background(Color.init(uiColor: UIColor(red: 0.937, green: 0.89, blue: 0.298, alpha: 1)))
+                        if meal.special == "เมนูพิเศษเฉพาะเดือนนี้" {
+                            Text(meal.special)
+                                .font(.system(size: 12))
+                                .padding(8)
+                                .background(Color.init(uiColor: UIColor(red: 0.937, green: 0.89, blue: 0.298, alpha: 1)))
+                        }
+                        
                     }
                     
                     HStack (alignment: .top, spacing: 30) {

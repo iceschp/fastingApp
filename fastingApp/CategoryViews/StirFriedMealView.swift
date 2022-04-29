@@ -12,6 +12,10 @@ struct StirFriedMealView: View {
         
         ScrollView {
             LazyVStack(alignment: .leading) {
+                Text("เมนูผัด 🍲")
+                    .font(.title)
+                
+                Divider()
                 
                 ForEach(meals) { meal in
                     if meal.category == "stirfried" {

@@ -124,14 +124,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		481FC2DD27F451770097BC0E /* timer */ = {
+		481FC2DD27F451770097BC0E /* Timer */ = {
 			isa = PBXGroup;
 			children = (
 				481FC2DE27F451C90097BC0E /* TimeHome.swift */,
 				48F54C5E27F829F70048C379 /* ProgressRing.swift */,
 				48F54C6027F8360A0048C379 /* FastingManager.swift */,
 			);
-			path = timer;
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		482AA90A281C27F60067CCA3 /* Meals */ = {
+			isa = PBXGroup;
+			children = (
+				4870F41828071F5C00A79CBD /* MealRow.swift */,
+				48076F1F28088F3E00C018EB /* MealRecipe.swift */,
+			);
+			path = Meals;
 			sourceTree = "<group>";
 		};
 		486381BC281AFC1500A56603 /* CategoryViews */ = {
@@ -173,8 +182,9 @@
 				1703F57827E1BFFD0077B3AA /* FaceIDSwiftUIView.swift */,
 				48AD5B8027EE11C600A2AFD0 /* Views */,
 				48FBA40027EDA17B008D7AD3 /* Categories */,
+				482AA90A281C27F60067CCA3 /* Meals */,
 				486381BC281AFC1500A56603 /* CategoryViews */,
-				481FC2DD27F451770097BC0E /* timer */,
+				481FC2DD27F451770097BC0E /* Timer */,
 				4808E71C2806CBE6004A3868 /* Model */,
 				48FBA40527EDA91C008D7AD3 /* Resources */,
 				1703F58127E376B70077B3AA /* GoogleService-Info-2.plist */,
@@ -207,8 +217,6 @@
 				48FBA40127EDA3AA008D7AD3 /* CategoryRow.swift */,
 				48810D3B281AFE1200BB230E /* MealHeader.swift */,
 				486381BD281AFC5200A56603 /* Banner.swift */,
-				4870F41828071F5C00A79CBD /* MealRow.swift */,
-				48076F1F28088F3E00C018EB /* MealRecipe.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
