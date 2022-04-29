@@ -45,7 +45,7 @@ struct CategoryRow: View {
                 
             }
         }
-        .padding(.horizontal)
+        .padding(.leading)
         .padding(.bottom)
         
     }
