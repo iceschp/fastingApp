@@ -34,18 +34,21 @@ struct CategoryBody: View {
                     Banner()
                                         
                     HStack {
-                        Text("เมนูที่น่าสนใจ 🔥")
+                        Text("เมนูประจำเดือนนี้ 🔥")
                             .font(.system(size: 20)).bold()
                     }
                     .padding()
                     
                     
                     ForEach(meals) { meal in
-                        NavigationLink {
-                            MealRecipe(meal: meal)
-                        } label: {
-                            MealRow(meal: meal)
+                        if meal.special == "เมนูพิเศษเฉพาะเดือนนี้" {
+                            NavigationLink {
+                                MealRecipe(meal: meal)
+                            } label: {
+                                MealRow(meal: meal)
+                            }
                         }
+                        
                     }
                     .padding(.horizontal)
                     
