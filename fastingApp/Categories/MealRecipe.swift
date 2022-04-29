@@ -47,9 +47,10 @@ struct MealRecipe: View {
                                 VStack (alignment: .leading, spacing: 10) {
                                     Text("โปรตีน")
                                         .font(.system(size: 14)).bold()
-                                    Text("กุ้ง")
-                                        .font(.system(size: 14))
-                                    Text("อกไก่")
+                                    Group {
+                                        Text(meal.protein1)
+                                        Text(meal.protein2)
+                                    }
                                         .font(.system(size: 14))
                                 }
                                 
@@ -144,6 +145,7 @@ struct MealRecipe: View {
                                 Text(meal.instruction9)
                                 Text(meal.instruction10)
                             }
+                            .multilineTextAlignment(.leading)
                             .font(.system(size: 12))
                         }
                         .frame(maxWidth: 330, maxHeight: .infinity)
@@ -165,6 +167,7 @@ struct MealRecipe: View {
 struct MealRecipe_Previews: PreviewProvider {
     static var previews: some View {
         MealRecipe(meal: meals[0])
+        MealRecipe(meal: meals[1])
     }
 }
 

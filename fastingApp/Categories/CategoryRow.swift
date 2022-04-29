@@ -35,7 +35,6 @@ struct CategoryRow: View {
                             Text(category.title)
                                 .font(.system(size: 14).bold())
                                 .foregroundColor(.black)
-                            
                         }
                         .frame(width: 100, height: 120)
                         .background(Color.init(uiColor: category.bgColor))
