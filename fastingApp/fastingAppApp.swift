@@ -25,6 +25,7 @@ struct fastingAppApp: App {
             NavigationView{
                 switch sessionService.state {
                 case .logedIn:
+                    // Home page ICE
                     HomeView()
                         .environmentObject(sessionService)
                 case .loggedOut:

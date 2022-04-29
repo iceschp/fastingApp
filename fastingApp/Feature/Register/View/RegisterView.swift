@@ -14,6 +14,24 @@ struct RegisterView: View {
     var body: some View {
         NavigationView {
             VStack(spacing: 32){
+                VStack{
+                    HStack (spacing: 0){
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(Color("Color1"))
+                        .frame(width: 150, height: 150)
+                    RoundedRectangle(cornerRadius: 10)
+                            .fill(Color("Color4"))
+                            .frame(width: 400, height: 150)
+                    }
+                    
+                    Image("login")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 150, height: 150)
+                        .padding(.horizontal,-170)
+                        .padding(.vertical,-140)
+                        .padding(10)
+                }
                 VStack(spacing: 16){
                     InputTextFieldView(text: $vm.userDetails.email,
                                placeholder: "Email",

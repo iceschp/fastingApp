@@ -67,8 +67,7 @@ struct Home: View {
             .opacity(text == "" ? 0.6 : 1)
             .padding(20)
             VStack{
-               NavigationLink(destination: Select_plan  ()){
-                Button(action: {}, label: {
+               NavigationLink(destination: Select_plan()){
                     Text("ตกลง")
                         .foregroundColor(.white)
                         .fontWeight(.semibold)
@@ -76,8 +75,9 @@ struct Home: View {
                         .frame(height: 50)
                         .background(Capsule().fill(Color.orange))
                         .frame(width: 300)
-                })
                 }
+                
+                
             }
         }
         .padding(15)

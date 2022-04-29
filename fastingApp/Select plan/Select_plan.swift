@@ -1,5 +1,5 @@
 //
-//  Select plan.swift
+//  Select_plan.swift
 //  fastingApp
 //
 //  Created by Milk Jiraporn on 27/4/2565 BE.
@@ -58,6 +58,7 @@ struct Select_plan: View {
                         Text("Lorem : Ipsum has been the industry's : standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book. ")
                               .frame(width: 250, height: 150)
                               .foregroundColor(.white)
+                        //NavigationLink Home page
                         Button(action: {}, label: {
                             Text("PERMIUM PLAN")
                                 .foregroundColor(.white)
@@ -79,7 +80,6 @@ struct Select_plan: View {
             }// End ScrollView
                 .padding(20)
                 .padding(.horizontal,350)
-                .animation(.interactiveSpring())
             }// End ScrollView
             .navigationTitle("Select Plan")
             .background(Color.orange)

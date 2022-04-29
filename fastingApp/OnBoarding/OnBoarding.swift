@@ -109,15 +109,15 @@ struct OnBoarding: View {
                         
                     } else {
                         //Go to LoginView
-                        NavigationLink(destination: LoginView ()){
-                        Button(action: {}, label: {
+                        NavigationLink(destination: LoginView()){
+                      
                             Text("Get started")
                                 .foregroundColor(.black)
                                 .fontWeight(.semibold)
                                 .frame(maxWidth: .infinity)
                                 .frame(height: 60)
                                 .background(Capsule().fill(Color.white))
-                          })
+                          
                         }
                            }
                         

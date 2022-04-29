@@ -29,6 +29,10 @@ struct LoginView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 200, height: 200)
+                .padding(.horizontal,-170)
+                .padding(.vertical,-140)
+                .padding(30)
+
                 
             VStack(spacing: 16) {
                 InputTextFieldView(text: $vm.credentials.email,
