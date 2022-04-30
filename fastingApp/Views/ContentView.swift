@@ -31,7 +31,7 @@ struct CustomTabView: View {
             TabView(selection: $selectedTab) {
                 Header()
                     .tag("home")
-                CategoryHome()
+                TimeHome()
                     .tag("barchart")
                 TimeHome()
                     .tag("person")
@@ -74,7 +74,6 @@ struct TabButton: View {
 }
 
 struct Header: View {
-   
 
     var body: some View {
         
