@@ -74,6 +74,8 @@ struct TabButton: View {
 }
 
 struct Header: View {
+   
+
     var body: some View {
         
         NavigationView {
@@ -127,9 +129,11 @@ struct Header: View {
                 }
                 
             }
+        
         }
         .edgesIgnoringSafeArea(.all)
         .frame( maxWidth: .infinity)
+        .accentColor(.black)
     }
 }
 

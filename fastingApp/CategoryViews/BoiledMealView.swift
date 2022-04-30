@@ -29,6 +29,7 @@ struct BoiledMealView: View {
                 }
                 
             }
+            .navigationBarBackButtonHidden(true)
             .navigationBarTitleDisplayMode(.inline)
         }
         .padding(.horizontal)

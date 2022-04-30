@@ -32,7 +32,7 @@ struct CategoryBody: View {
                     CategoryRow()
                     
                     Banner()
-                                        
+                    
                     HStack {
                         Text("เมนูประจำเดือนนี้ 🔥")
                             .font(.system(size: 20)).bold()
