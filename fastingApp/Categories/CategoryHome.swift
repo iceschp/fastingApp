@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Alamofire
 
 struct CategoryHome: View {
     var body: some View {
@@ -17,7 +18,6 @@ struct CategoryBody: View {
     
     var body: some View {
         
-        NavigationView {
             ScrollView {
                 LazyVStack(alignment: .leading) {
                     
@@ -32,7 +32,7 @@ struct CategoryBody: View {
                     CategoryRow()
                     
                     Banner()
-                                        
+                    
                     HStack {
                         Text("เมนูประจำเดือนนี้ 🔥")
                             .font(.system(size: 20)).bold()
@@ -56,10 +56,8 @@ struct CategoryBody: View {
             }
             .frame( maxWidth: .infinity)
             .edgesIgnoringSafeArea(.all)
-            .navigationBarHidden(true)
             .padding(.bottom, 20)
-        }
-        .accentColor(.black)
+        
     }
 }
 
