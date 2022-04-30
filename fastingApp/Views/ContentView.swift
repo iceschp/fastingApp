@@ -49,7 +49,7 @@ struct CustomTabView: View {
                 }
             }
             .padding(.horizontal,25)
-//            .padding(.vertical,5)
+            //            .padding(.vertical,5)
             .background(Color.init(uiColor: UIColor(red: 0.922, green: 0.38, blue: 0.239, alpha: 1)))
         }
     }
@@ -75,67 +75,88 @@ struct TabButton: View {
 
 struct Header: View {
     var body: some View {
-        VStack {
-            HStack {
-                VStack(alignment: .leading, spacing: 10) {
-                    Text("กินนำกันเด้อ")
-                        .font(.system(size: 35)).bold()
-                    
-                    Text("สุขภาพที่ดีเริ่มต้นที่ตัวเรา")
-                        .font(.system(size: 14))
-                        .foregroundColor(.white)
-                }
-                Spacer(minLength: 0)
         
-                ZStack {
-                    Image("picture-1")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .offset(x: 20, y: 45)
-                }
-            }
-            .padding(.leading, 15)
-            .padding(.trailing, 15)
-            .background(Color.init(uiColor: UIColor(red: 0.922, green: 0.38, blue: 0.239, alpha: 1))).edgesIgnoringSafeArea(.all)
+        NavigationView {
             
-            Spacer(minLength: 0)
-            
-            VStack {
-                LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 15), count: 2), spacing: 15) {
+            ScrollView {
+                
+                HStack {
+                    VStack(alignment: .leading, spacing: 10) {
+                        Text("กินนำกันเด้อ")
+                            .font(.system(size: 35)).bold()
+                        
+                        Text("สุขภาพที่ดีเริ่มต้นที่ตัวเรา")
+                            .font(.system(size: 14))
+                            .foregroundColor(.white)
+                    }
+                    Spacer(minLength: 0)
                     
-                    ForEach(menus) { menu in
-                        CardView(menu: menu)
+                    ZStack {
+                        Image("picture-1")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .offset(x: 20, y: 45)
                     }
                 }
-                .padding(10)
+                .padding(.leading, 15)
+                .padding(.trailing, 15)
+                .background(Color.init(uiColor: UIColor(red: 0.922, green: 0.38, blue: 0.239, alpha: 1))).edgesIgnoringSafeArea(.all)
+                
                 Spacer(minLength: 0)
+                
+                VStack {
+                    LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 15), count: 2), spacing: 15) {
+                        
+                        ForEach(HomeMenuCards.allCases, id: \.self) { menu in
+                            NavigationLink(
+                                destination:
+                                    Group {
+                                        if menu == HomeMenuCards.thaifood {
+                                            CategoryHome()
+                                        } else if menu == HomeMenuCards.savedMenus {
+                                            BoiledMealView()
+                                        } else {
+                                            FriedMealView()
+                                        }
+                                    })
+                            {
+                                CardView(HomeMenuCard: menu)
+                            }
+                        }
+                    }
+                    .padding()
+                }
             }
+            .frame( maxWidth: .infinity)
+            .edgesIgnoringSafeArea(.all)
+            .navigationBarHidden(true)
         }
     }
 }
 
 struct CardView: View {
-    var menu : Menu
+    var HomeMenuCard: HomeMenuCards
     
     var body: some View {
         VStack {
-                Text(menu.name)
-                    .font(.system(size: 24))
-                    .padding(.top, 15)
-                    .padding(.bottom, 10)
+            Text(HomeMenuCard.name)
+                .font(.system(size: 22))
+                .padding(.top, 15)
+                .padding(.bottom, 10)
+                .foregroundColor(.black)
             
             Spacer(minLength: 5)
             
-            Text(menu.icon)
+            Text(HomeMenuCard.icon)
                 .font(.system(size: 70))
             
             Spacer(minLength: 5)
             
             HStack {
                 VStack(alignment: .leading, spacing: 10) {
-                    Text(menu.subMenu)
+                    Text(HomeMenuCard.subMenu)
                         .font(.system(size: 18)).bold()
-                    Text(menu.caption)
+                    Text(HomeMenuCard.caption)
                         .font(.system(size: 12))
                 }
                 .foregroundColor(.black)
@@ -144,22 +165,8 @@ struct CardView: View {
             }
             .padding()
         }
-        .background(Color.init(uiColor: UIColor(red: 0.851, green: 0.953, blue: 0.996, alpha: 1)))
+        .background(Color.init(uiColor: HomeMenuCard.bgColor))
         .cornerRadius(20)
     }
 }
 
-struct Menu: Identifiable {
-    var id = UUID().uuidString
-    var name : String
-    var subMenu : String
-    var caption : String
-    var icon : String
-}
-
-var menus = [
-    Menu(name: "Diet Meal", subMenu: "เมนูอาหารไทย", caption: "รวบรวมมากกว่า 200 เมนู", icon: "🥑"),
-    Menu(name: "Drink Water", subMenu: "ดื่มน้ำ", caption: "Stay hydrated", icon: "🥛"),
-    Menu(name: "Saved Menus", subMenu: "เมนูที่ถูกบันทึกไว้", caption: "เมนูอาหารไทยที่บันทึกไว้", icon: "❤️"),
-    Menu(name: "Note", subMenu: "บันทึก", caption: "จดบันทึกไดอารี่", icon: "🖍")
-]
