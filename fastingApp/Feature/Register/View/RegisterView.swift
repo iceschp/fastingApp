@@ -56,6 +56,7 @@ struct RegisterView: View {
                                        keyboardType: .namePhonePad,
                                        sfSymbol: nil)
         }
+                
                 ButtonView(title:"Sign Up"){
                     vm.register()
                 }

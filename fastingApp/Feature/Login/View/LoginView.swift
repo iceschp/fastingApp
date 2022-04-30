@@ -29,8 +29,8 @@ struct LoginView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 200, height: 200)
-                .padding(.horizontal,-170)
-                .padding(.vertical,-140)
+                .padding(.horizontal,-190)
+                .padding(.vertical,-200)
                 .padding(30)
 
                 

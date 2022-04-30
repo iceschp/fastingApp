@@ -28,9 +28,9 @@ struct TagView: View {
              //Displaying Tags.....
                     ForEach(getRows(),id: \.self){rows in
                         HStack(spacing:6) {
-                            ForEach(rows){ row in
+                            ForEach(rows){row in
                                 // Row View...
-                                RowView(tag: row)
+                                RowView(tag: row) //tag
                             }
                         }
                     }
@@ -57,13 +57,16 @@ struct TagView: View {
             )
       }
         //Since onChang will prefrom little late...
-//        .onChange(of: tags) { newValue in
-//
-//        }
+        .onChange(of: tags) { newValue in
+        // getting newly inserted Value
+            guard let last = tags.last else {
+                return
+            }
+       }
         
   }
-    @ViewBuilder
-    func RowView(tag: Tag)->some View {
+@ViewBuilder
+func RowView(tag: Tag)->some View {
         Text(tag.text)
         // applying same font size..
         //else size will vary..

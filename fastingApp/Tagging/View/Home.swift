@@ -14,6 +14,7 @@ struct Home: View {
     @State var tags:[Tag] = []
     @State var showAlert: Bool = false
     var body: some View {
+        NavigationView{
         VStack {
             Text("Meal Style")
                 .font(.system(size: 35, weight: .bold))
@@ -25,9 +26,10 @@ struct Home: View {
                 .frame(height: 280)
                 .padding(.top,20)
                         // TextField...
+           
             TextField("เพิ่มประเภท", text: $text)
                 .font(.title3)
-                .padding(.vertical,12)
+                .padding(.vertical,15.0)
                 .padding(.horizontal)
                 .background(
                     RoundedRectangle(cornerRadius: 10)
@@ -38,7 +40,8 @@ struct Home: View {
                 .padding(.vertical,20)
             // Add Button.. {
             Button {
-                addTag(tags: tags, text: text, fontSize: 16, maxLimit: 150){
+                // adding Tag...
+               addTag(tags: tags, text: text, fontSize: 16, maxLimit: 150){
                     alert, tag in
                     if alert{
                         //Showing alert..
@@ -91,7 +94,7 @@ struct Home: View {
         }
     }
  }
-
+}
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
         Home()
