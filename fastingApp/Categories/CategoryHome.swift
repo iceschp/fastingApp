@@ -53,6 +53,7 @@ struct CategoryBody: View {
                     .padding(.horizontal)
                     
                 }
+                .navigationBarTitleDisplayMode(.inline)
             }
             .frame( maxWidth: .infinity)
             .edgesIgnoringSafeArea(.all)

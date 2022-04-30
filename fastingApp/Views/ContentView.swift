@@ -78,7 +78,7 @@ struct Header: View {
         
         NavigationView {
             
-            ScrollView {
+            VStack {
                 
                 HStack {
                     VStack(alignment: .leading, spacing: 10) {
@@ -89,7 +89,8 @@ struct Header: View {
                             .font(.system(size: 14))
                             .foregroundColor(.white)
                     }
-                    Spacer(minLength: 0)
+                    
+                    Spacer()
                     
                     ZStack {
                         Image("picture-1")
@@ -98,11 +99,9 @@ struct Header: View {
                             .offset(x: 20, y: 45)
                     }
                 }
-                .padding(.leading, 15)
-                .padding(.trailing, 15)
+                .padding(.horizontal)
                 .background(Color.init(uiColor: UIColor(red: 0.922, green: 0.38, blue: 0.239, alpha: 1))).edgesIgnoringSafeArea(.all)
                 
-                Spacer(minLength: 0)
                 
                 VStack {
                     LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 15), count: 2), spacing: 15) {
@@ -126,11 +125,11 @@ struct Header: View {
                     }
                     .padding()
                 }
+                
             }
-            .frame( maxWidth: .infinity)
-            .edgesIgnoringSafeArea(.all)
-            .navigationBarHidden(true)
         }
+        .edgesIgnoringSafeArea(.all)
+        .frame( maxWidth: .infinity)
     }
 }
 
