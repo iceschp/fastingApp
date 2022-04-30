@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Alamofire
 
 struct CategoryHome: View {
     var body: some View {
@@ -17,7 +18,6 @@ struct CategoryBody: View {
     
     var body: some View {
         
-        NavigationView {
             ScrollView {
                 LazyVStack(alignment: .leading) {
                     
@@ -53,14 +53,11 @@ struct CategoryBody: View {
                     .padding(.horizontal)
                     
                 }
-                .navigationBarTitleDisplayMode(.inline)
             }
             .frame( maxWidth: .infinity)
             .edgesIgnoringSafeArea(.all)
-            .navigationBarHidden(true)
             .padding(.bottom, 20)
-        }
-        .accentColor(.black)
+        
     }
 }
 
