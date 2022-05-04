@@ -33,6 +33,7 @@ enum FastingPlan: String {
 class FastingManager: ObservableObject {
     @Published private(set) var fastingState: FastingState = .notStarted
     @Published private(set) var fastingPlan: FastingPlan = .beginner
+    
     @Published private(set) var startTime: Date {
         didSet {
             print("startTime", startTime.formatted(.dateTime.month().day().hour().minute().second()))
@@ -43,11 +44,13 @@ class FastingManager: ObservableObject {
             }
         }
     }
+    
     @Published private(set) var endTime: Date {
         didSet {
             print("endTime", endTime.formatted(.dateTime.month().day().hour().minute().second()))
         }
     }
+    
     @Published private(set) var elapsed: Bool = false
     @Published private(set) var elapsedTime: Double = 0.0
     @Published private(set) var progress: Double = 0.0
