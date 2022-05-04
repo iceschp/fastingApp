@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct SavedMenus: View {
+    @EnvironmentObject var modelData: ModelData
     @State private var showFavoritesOnly = true
     
     var filteredMealData: [Meal] {
-            meals.filter { meal in
-                (!showFavoritesOnly || meal.isFavorite)
-            }
+        modelData.meals.filter { meal in
+            (!showFavoritesOnly || meal.isFavorite)
         }
+    }
     
     
     var body: some View {
@@ -28,11 +29,11 @@ struct SavedMenus: View {
                 Divider()
                 
                 ForEach(filteredMealData) { meal in
-                        NavigationLink {
-                            MealRecipe(meal: meal)
-                        } label: {
-                            MealRow(meal: meal)
-                        }
+                    NavigationLink {
+                        MealRecipe(meal: meal)
+                    } label: {
+                        MealRow(meal: meal)
+                    }
                     
                 }
                 
