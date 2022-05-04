@@ -177,6 +177,8 @@ struct MealRecipe: View {
 }
 
 struct MealRecipe_Previews: PreviewProvider {
+    static var meals = ModelData().meals
+    
     static var previews: some View {
         MealRecipe(meal: meals[0])
         MealRecipe(meal: meals[1])
