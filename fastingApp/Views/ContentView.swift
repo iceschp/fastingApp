@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
         CustomTabView()
     }
@@ -16,6 +17,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(ModelData())
     }
 }
 
@@ -114,7 +116,7 @@ struct Header: View {
                                         if menu == HomeMenuCards.thaifood {
                                             CategoryHome()
                                         } else if menu == HomeMenuCards.savedMenus {
-                                            BoiledMealView()
+                                            SavedMenus()
                                         } else {
                                             FriedMealView()
                                         }

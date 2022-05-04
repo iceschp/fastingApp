@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>720519117676-td5fnjk8rcitd33ra2m416oissmtlh39.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.720519117676-td5fnjk8rcitd33ra2m416oissmtlh39</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD7j0tpNwv5S9SBGOwMmocBtJkVOJE-yCw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>720519117676</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>icce.fastingApp</string>
+	<key>PROJECT_ID</key>
+	<string>fastingapp-ab34b</string>
+	<key>STORAGE_BUCKET</key>
+	<string>fastingapp-ab34b.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:720519117676:ios:731fa369d2dc20b3f01149</string>
+</dict>
+</plist>

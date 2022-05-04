@@ -12,6 +12,7 @@
 		4808E71E2806CC1C004A3868 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4808E71D2806CC1C004A3868 /* ModelData.swift */; };
 		4808E7202806CC37004A3868 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4808E71F2806CC37004A3868 /* Meal.swift */; };
 		4808E7222806CD07004A3868 /* mealData.json in Resources */ = {isa = PBXBuildFile; fileRef = 4808E7212806CD07004A3868 /* mealData.json */; };
+		481F914F28226F4600642B29 /* SavedMenus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481F914E28226F4600642B29 /* SavedMenus.swift */; };
 		481FC2DF27F451C90097BC0E /* TimeHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481FC2DE27F451C90097BC0E /* TimeHome.swift */; };
 		482AA90C281C344D0067CCA3 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482AA90B281C344D0067CCA3 /* RemoteImage.swift */; };
 		482B98D328198D6C0054405A /* MenuBarOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482B98D228198D6B0054405A /* MenuBarOptions.swift */; };
@@ -27,6 +28,7 @@
 		48810D40281B084C00BB230E /* StirFriedMealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48810D3F281B084C00BB230E /* StirFriedMealView.swift */; };
 		48810D42281B08B400BB230E /* BasicMealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48810D41281B08B400BB230E /* BasicMealView.swift */; };
 		48840760281CEAFC003CE114 /* HomeMenuCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4884075F281CEAFC003CE114 /* HomeMenuCards.swift */; };
+		48B688AC2822C31D00B0A87D /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B688AB2822C31D00B0A87D /* FavoriteButton.swift */; };
 		48CC5BA527EC230400341151 /* CategoryHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CC5BA427EC230400341151 /* CategoryHome.swift */; };
 		48F54C5F27F829F70048C379 /* ProgressRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F54C5E27F829F70048C379 /* ProgressRing.swift */; };
 		48F54C6127F8360A0048C379 /* FastingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F54C6027F8360A0048C379 /* FastingManager.swift */; };
@@ -40,6 +42,7 @@
 		4808E71D2806CC1C004A3868 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		4808E71F2806CC37004A3868 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		4808E7212806CD07004A3868 /* mealData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mealData.json; sourceTree = "<group>"; };
+		481F914E28226F4600642B29 /* SavedMenus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMenus.swift; sourceTree = "<group>"; };
 		481FC2DE27F451C90097BC0E /* TimeHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeHome.swift; sourceTree = "<group>"; };
 		482AA90B281C344D0067CCA3 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		482B98D228198D6B0054405A /* MenuBarOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarOptions.swift; sourceTree = "<group>"; };
@@ -56,6 +59,7 @@
 		48810D3F281B084C00BB230E /* StirFriedMealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StirFriedMealView.swift; sourceTree = "<group>"; };
 		48810D41281B08B400BB230E /* BasicMealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicMealView.swift; sourceTree = "<group>"; };
 		4884075F281CEAFC003CE114 /* HomeMenuCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuCards.swift; sourceTree = "<group>"; };
+		48B688AB2822C31D00B0A87D /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		48CC5BA427EC230400341151 /* CategoryHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHome.swift; sourceTree = "<group>"; };
 		48F54C5E27F829F70048C379 /* ProgressRing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRing.swift; sourceTree = "<group>"; };
 		48F54C6027F8360A0048C379 /* FastingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingManager.swift; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 				4808E71F2806CC37004A3868 /* Meal.swift */,
 				482B98D228198D6B0054405A /* MenuBarOptions.swift */,
 				4884075F281CEAFC003CE114 /* HomeMenuCards.swift */,
+				48B688AB2822C31D00B0A87D /* FavoriteButton.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				486E171B27D067CB001B2106 /* ContentView.swift */,
+				481F914E28226F4600642B29 /* SavedMenus.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -328,9 +334,11 @@
 				48F54C5F27F829F70048C379 /* ProgressRing.swift in Sources */,
 				486381BE281AFC5200A56603 /* Banner.swift in Sources */,
 				482B98D328198D6C0054405A /* MenuBarOptions.swift in Sources */,
+				481F914F28226F4600642B29 /* SavedMenus.swift in Sources */,
 				482AA90C281C344D0067CCA3 /* RemoteImage.swift in Sources */,
 				48810D3E281B07B800BB230E /* FriedMealView.swift in Sources */,
 				48F54C6127F8360A0048C379 /* FastingManager.swift in Sources */,
+				48B688AC2822C31D00B0A87D /* FavoriteButton.swift in Sources */,
 				4870F41928071F5C00A79CBD /* MealRow.swift in Sources */,
 				486E171C27D067CB001B2106 /* ContentView.swift in Sources */,
 				486381BB281AEFF000A56603 /* BoiledMealView.swift in Sources */,

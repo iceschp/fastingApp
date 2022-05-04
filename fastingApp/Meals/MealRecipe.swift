@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct MealRecipe: View {
+    @EnvironmentObject var modelData: ModelData
+    
+    var mealIndex: Int {
+        modelData.meals.firstIndex(where: { $0.id == meal.id })!
+    }
+    
     var meal: Meal
     
     var body: some View {
@@ -15,6 +21,12 @@ struct MealRecipe: View {
         ScrollView(.vertical, showsIndicators: false, content: {
             
             VStack {
+                
+                HStack {
+                    Spacer()
+                    FavoriteButton(isSet: $modelData.meals[mealIndex].isFavorite)
+                }
+                .padding(.trailing)
                 
                 VStack (spacing: 30) {
                     VStack (spacing: 20) {
@@ -53,7 +65,7 @@ struct MealRecipe: View {
                                         Text(meal.protein1)
                                         Text(meal.protein2)
                                     }
-                                        .font(.system(size: 14))
+                                    .font(.system(size: 14))
                                 }
                                 
                                 VStack (alignment: .leading, spacing: 10) {
@@ -167,9 +179,10 @@ struct MealRecipe: View {
 }
 
 struct MealRecipe_Previews: PreviewProvider {
+    static let modelData = ModelData()
+    
     static var previews: some View {
-        MealRecipe(meal: meals[0])
-        MealRecipe(meal: meals[1])
+        MealRecipe(meal: modelData.meals[0])
+            .environmentObject(modelData)
     }
 }
-
