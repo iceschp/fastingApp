@@ -8,6 +8,15 @@
 import SwiftUI
 
 struct SavedMenus: View {
+    @State private var showFavoritesOnly = true
+    
+    var filteredMealData: [Meal] {
+            meals.filter { meal in
+                (!showFavoritesOnly || meal.isFavorite)
+            }
+        }
+    
+    
     var body: some View {
         
         ScrollView {
@@ -17,6 +26,17 @@ struct SavedMenus: View {
                     .font(.title)
                 
                 Divider()
+                
+                ForEach(filteredMealData) { meal in
+                        NavigationLink {
+                            MealRecipe(meal: meal)
+                        } label: {
+                            MealRow(meal: meal)
+                        }
+                    
+                }
+                
+                
             }
             .navigationBarTitleDisplayMode(.inline)
         }
