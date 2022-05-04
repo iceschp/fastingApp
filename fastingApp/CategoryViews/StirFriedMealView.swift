@@ -8,6 +8,16 @@
 import SwiftUI
 
 struct StirFriedMealView: View {
+    @EnvironmentObject var modelData: ModelData
+    
+    
+    var filteredStirfried: [Meal] {
+        modelData.meals.filter { meal in
+            meal.category == "stirfried"
+        }
+    }
+
+    
     var body: some View {
         
         ScrollView {
@@ -17,14 +27,14 @@ struct StirFriedMealView: View {
                 
                 Divider()
                 
-                ForEach(meals) { meal in
-                    if meal.category == "stirfried" {
+                ForEach(filteredStirfried) { meal in
+                    
                         NavigationLink {
                             MealRecipe(meal: meal)
                         } label: {
                             MealRow(meal: meal)
                         }
-                    }
+                    
                     
                 }
                 
@@ -39,5 +49,6 @@ struct StirFriedMealView: View {
 struct StirFriedMealView_Previews: PreviewProvider {
     static var previews: some View {
         StirFriedMealView()
+            .environmentObject(ModelData())
     }
 }

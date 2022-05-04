@@ -90,6 +90,8 @@ struct MealRow: View {
 
 
 struct MealRow_Previews: PreviewProvider {
+    static var meals = ModelData().meals
+    
     static var previews: some View {
         Group {
             MealRow(meal: meals[0])
