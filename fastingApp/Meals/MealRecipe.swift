@@ -16,6 +16,16 @@ struct MealRecipe: View {
             
             VStack {
                 
+                HStack {
+                    Spacer()
+                    if meal.isFavorite {
+                        Image(systemName: "heart.fill")
+                            .foregroundColor(.red)
+                            .font(.system(size: 26))
+                    }
+                }
+                .padding(.trailing)
+                
                 VStack (spacing: 30) {
                     VStack (spacing: 20) {
                         Text(meal.name)
@@ -53,7 +63,7 @@ struct MealRecipe: View {
                                         Text(meal.protein1)
                                         Text(meal.protein2)
                                     }
-                                        .font(.system(size: 14))
+                                    .font(.system(size: 14))
                                 }
                                 
                                 VStack (alignment: .leading, spacing: 10) {
