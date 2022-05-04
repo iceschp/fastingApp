@@ -114,7 +114,7 @@ struct Header: View {
                                         if menu == HomeMenuCards.thaifood {
                                             CategoryHome()
                                         } else if menu == HomeMenuCards.savedMenus {
-                                            BoiledMealView()
+                                            SavedMenus()
                                         } else {
                                             FriedMealView()
                                         }

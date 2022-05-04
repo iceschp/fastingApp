@@ -27,5 +27,7 @@ struct Meal: Hashable, Codable, Identifiable {
     
     var instruction1, instruction2, instruction3, instruction4, instruction5: String
     var instruction6, instruction7, instruction8, instruction9, instruction10: String
+    
+    var isFavorite: Bool
 }
 
