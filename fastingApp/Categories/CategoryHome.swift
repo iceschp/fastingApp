@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Alamofire
 
 struct CategoryHome: View {
     @EnvironmentObject var modelData: ModelData
