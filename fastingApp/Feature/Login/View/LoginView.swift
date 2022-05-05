@@ -14,13 +14,15 @@ struct LoginView: View {
         service: LoginServiceImpl()
     )
     var screenWidth = UIScreen.main.bounds.width
+   
     var body: some View {
+        
         VStack(spacing: 10) {
             HStack (spacing: 0){
-            RoundedRectangle(cornerRadius: 10)
-                .fill(Color("Color1"))
-                .frame(width: 200, height: 150)
-            RoundedRectangle(cornerRadius: 10)
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(Color("Color1"))
+                    .frame(width: 200, height: 150)
+                RoundedRectangle(cornerRadius: 10)
                     .fill(Color("Color4"))
                     .frame(width: 400, height: 150)
             }
@@ -32,8 +34,8 @@ struct LoginView: View {
                 .padding(.horizontal,-190)
                 .padding(.vertical,-200)
                 .padding(30)
-
-                
+            
+            
             VStack(spacing: 16) {
                 InputTextFieldView(text: $vm.credentials.email,
                                    placeholder: "Email",
@@ -41,8 +43,8 @@ struct LoginView: View {
                                    sfSymbol: "envelope")
                 
                 InputPasswordView(password: $vm.credentials.password,
-                                   placeholder: "Password",
-                                   sfSymbol: "lock")
+                                  placeholder: "Password",
+                                  sfSymbol: "lock")
             }
             VStack(spacing:20){
                 ButtonView(title: "Login"){
@@ -54,9 +56,9 @@ struct LoginView: View {
                            border: .green){
                     showRegistration.toggle()
                 }
-                        .sheet(isPresented: $showRegistration, content: {
+                           .sheet(isPresented: $showRegistration, content: {
                                RegisterView()
-                })
+                           })
             }
             HStack {
                 Spacer()
@@ -64,7 +66,7 @@ struct LoginView: View {
                     showForgotPassword.toggle()
                 }, label: { Text("Forgot Password")
                 })
-                    .font(.system(size: 15, weight: .bold))
+                .font(.system(size: 15, weight: .bold))
             }
         }
         .sheet(isPresented: $showForgotPassword, content: {

@@ -5,14 +5,13 @@
 //  Created by Milk Jiraporn on 24/3/2565 BE.
 //
 
-import Foundation
-
 struct RegistrationDetails {
     var email: String
     var password: String
     var firstName: String
     var lastName:String
-    var occupation:String
+    var Weight:String
+    var Height_1:String
 }
 extension RegistrationDetails {
     static var new: RegistrationDetails {
@@ -21,6 +20,7 @@ extension RegistrationDetails {
                             password:"",
                             firstName:"",
                             lastName:"",
-                            occupation: "")
+                            Weight: "",
+                            Height_1: "")
     }
 }

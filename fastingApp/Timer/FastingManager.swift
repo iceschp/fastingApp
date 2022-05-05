@@ -91,21 +91,21 @@ class FastingManager: ObservableObject {
     func track() {
         guard fastingState != .notStarted else { return }
         
-        print("now", Date().formatted(.dateTime.month().day().hour().minute().second()))
+//        print("now", Date().formatted(.dateTime.month().day().hour().minute().second()))
         
         if endTime >= Date() {
-            print("Not elapsed")
+//            print("Not elapsed")
             elapsed = false
         } else {
-            print("elapsed")
+//            print("elapsed")
             elapsed = true
         }
         
         elapsedTime += 1
-        print("elapsedTime", elapsedTime)
+//        print("elapsedTime", elapsedTime)
         
         let totalTime = fastingState == .fasting ? fastingTime : feedingTime
         progress = (elapsedTime / totalTime * 100).rounded() / 100
-        print("progress", progress)
+//        print("progress", progress)
     }
 }

@@ -24,7 +24,7 @@ struct OnBoarding: View {
     @State private var selection: String = ""
     
     var body: some View {
-        NavigationView {
+        
         ZStack {
             GeometryReader { reader in
                 HStack(spacing: 0) {
@@ -97,7 +97,7 @@ struct OnBoarding: View {
                             }, label: {
                                 HStack {
                                     Text("Next")
-                                            
+                                    
                                     Image(systemName: "arrow.right")
                                 }
                                 .font(.system(size: 17, weight: .bold))
@@ -109,31 +109,30 @@ struct OnBoarding: View {
                         
                     } else {
                         //Go to LoginView
-                        NavigationLink(destination: LoginView()){
-                      
+                        NavigationLink(destination: Home()){
+                            
                             Text("Get started")
                                 .foregroundColor(.black)
                                 .fontWeight(.semibold)
                                 .frame(maxWidth: .infinity)
                                 .frame(height: 60)
                                 .background(Capsule().fill(Color.white))
-                          
+                            
                         }
-                           }
-                        
+                    }
+                    
                 }
                 .padding(.horizontal)
             }
         }
-            
-        }
+        
+        
         
     }
     
     func onChanged(value: DragGesture.Value) {
         xOffset = value.translation.width - (screenWidth * CGFloat(currentPage))
     }
-    
     func onEnded(value: DragGesture.Value) {
         if -value.translation.width > screenWidth / 2  && currentPage < lastPage {
             currentPage += 1
@@ -148,7 +147,6 @@ struct OnBoarding: View {
         }
     }
 }
-
 struct ItemView: View {
     var item: Item
     
@@ -169,19 +167,17 @@ struct ItemView: View {
                         .animation(Animation.interpolatingSpring(stiffness: 40, damping: 8))
                     
                     Text(item.subtitle)
-                        .font(.system(size: 20, weight: .regular))
+                        .font(.system(size: 18, weight: .regular))
                         .multilineTextAlignment(.center)
                         .animation(Animation.interpolatingSpring(stiffness: 40, damping: 8))
                 }
                 .padding(.horizontal)
-                
                 Spacer()
             }
             .foregroundColor(.white)
         }
     }
 }
-
 struct OnBoarding_Preview: PreviewProvider {
     static var previews: some View {
         OnBoarding()

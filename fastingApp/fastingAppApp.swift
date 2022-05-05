@@ -10,10 +10,10 @@ import Firebase
 
 final class AppDelegate: NSObject,UIApplicationDelegate {
     func application(_ application: UIApplication,
-                         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-            FirebaseApp.configure()
-            return true
-        }
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        FirebaseApp.configure()
+        return true
+    }
 }
 @main
 struct fastingAppApp: App {
@@ -27,18 +27,14 @@ struct fastingAppApp: App {
             NavigationView{
                 switch sessionService.state {
                 case .logedIn:
-                    // Home page ICE
                     MainHome()
                         .environmentObject(modelData)
-//                    ProfileAccount()
-//                        .environmentObject(sessionService)
                 case .loggedOut:
                     LoginView()
                 }
-
+                
             }
         }
     }
 }
-
 

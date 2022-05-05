@@ -22,6 +22,7 @@ struct MainHome_Previews: PreviewProvider {
 }
 
 struct CustomTabView: View {
+    @StateObject var sessionService =  SessionServiceImpl()
     
     @State var selectedTab = "home"
     
@@ -35,7 +36,8 @@ struct CustomTabView: View {
                     .tag("home")
                 TimeHome()
                     .tag("barchart")
-                ProfileAccount()
+                HomeView()
+                    .environmentObject(sessionService)
                     .tag("person")
             }
             
@@ -72,11 +74,12 @@ struct TabButton: View {
                 .padding(.horizontal)
                 .padding(.top)
         }
+        
     }
 }
 
 struct Header: View {
-
+    
     var body: some View {
         
         NavigationView {
@@ -130,7 +133,7 @@ struct Header: View {
                 }
                 
             }
-        
+            
         }
         .edgesIgnoringSafeArea(.all)
         .frame( maxWidth: .infinity)

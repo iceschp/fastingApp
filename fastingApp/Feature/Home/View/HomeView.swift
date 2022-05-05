@@ -7,43 +7,43 @@
 
 import SwiftUI
 
-struct ProfileAccount: View {
+struct HomeView: View {
     @EnvironmentObject var sessionSservice: SessionServiceImpl
     var body: some View {
-       
-        VStack(alignment: .leading,
-               spacing: 30){
+        
+        VStack(alignment: .leading, spacing: 30) {
+            Text("Profile")
+                .font(.title)
+            
             VStack {
                 HStack {
                     Image("Profile")
-                    
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width:200)
                         .padding(70)
                 }
-               
             }
-          
+            
             VStack(alignment: .leading, spacing: 20) {
                 Text("First Name: \(sessionSservice.userDetails?.firstName ?? "N/A")")
-            Text("Last Name: \(sessionSservice.userDetails?.lastName ?? "N/A")")
-            Text("Occupation:\(sessionSservice.userDetails?.occupation ?? "N/A")")
+                Text("Last Name: \(sessionSservice.userDetails?.lastName ?? "N/A")")
+                Text("Weight: \(sessionSservice.userDetails?.Weight ?? "N/A")")
+                Text("Height: \(sessionSservice.userDetails?.Height_1 ?? "N/A")")
             }
+            
             ButtonView(title: "Logout"){
                 sessionSservice.logout()
             }
+            
         }
         .padding(.horizontal,16)
-        .navigationTitle("Main ContenView")
     }
 }
 
-struct ProfileAccount_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView{
-            ProfileAccount()
-                .environmentObject(SessionServiceImpl())
-        }
+        HomeView()
+            .environmentObject(SessionServiceImpl())
     }
 }

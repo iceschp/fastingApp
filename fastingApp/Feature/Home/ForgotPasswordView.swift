@@ -11,27 +11,29 @@ import SwiftUI
 struct ForgotPasswordView: View {
     
     @Environment(\.presentationMode) var presentationMode
-
+    
     @StateObject private var viewModel = ForgotPasswordViewModelImpl(
         service: ForgotPasswordServiceImpl()
     )
     
     var body: some View {
-            VStack(spacing: 16) {
+        VStack(alignment: .leading, spacing: 30) {
             
-                InputTextFieldView(text: $viewModel.email,
-                                   placeholder: "Email",
-                                   keyboardType: .emailAddress,
-                                   sfSymbol: "envelope")
-                
-                ButtonView(title: "Send Password Reset") {
-                    viewModel.sendPasswordResetRequest()
-                    presentationMode.wrappedValue.dismiss()
-                }
+            Text("Reset Password")
+                .font(.title)
+            
+            InputTextFieldView(text: $viewModel.email,
+                               placeholder: "Email",
+                               keyboardType: .emailAddress,
+                               sfSymbol: "envelope")
+            
+            ButtonView(title: "Send Password Reset") {
+                viewModel.sendPasswordResetRequest()
+                presentationMode.wrappedValue.dismiss()
             }
-            .padding(.horizontal, 15)
-            .navigationTitle("Reset Password")
-            .applyClose()
+        }
+        .padding(.horizontal, 15)
+        .applyClose()
     }
 }
 
