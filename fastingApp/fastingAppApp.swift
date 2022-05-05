@@ -20,14 +20,18 @@ struct fastingAppApp: App {
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     @StateObject var sessionService =  SessionServiceImpl()
+    @StateObject private var modelData = ModelData()
+    
     var body: some Scene{
         WindowGroup{
             NavigationView{
                 switch sessionService.state {
                 case .logedIn:
                     // Home page ICE
-                    HomeView()
-                        .environmentObject(sessionService)
+                    MainHome()
+                        .environmentObject(modelData)
+//                    ProfileAccount()
+//                        .environmentObject(sessionService)
                 case .loggedOut:
                     LoginView()
                 }
