@@ -18,7 +18,7 @@ struct BasicMealView: View {
     
     var body: some View {
         
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             LazyVStack(alignment: .leading) {
                 Text("เมนูอื่นๆ 🥗")
                     .font(.title)

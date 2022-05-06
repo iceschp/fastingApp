@@ -18,7 +18,7 @@ struct CategoryHome: View {
     
     var body: some View {
         
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             LazyVStack(alignment: .leading) {
                 
                 MealHeader()

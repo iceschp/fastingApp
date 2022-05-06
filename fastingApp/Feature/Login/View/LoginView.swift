@@ -18,6 +18,9 @@ struct LoginView: View {
     var body: some View {
         
         VStack(spacing: 10) {
+            Text("Login")
+                .font(.title)
+            
             HStack (spacing: 0){
                 RoundedRectangle(cornerRadius: 10)
                     .fill(Color("Color1"))
@@ -73,7 +76,8 @@ struct LoginView: View {
             ForgotPasswordView()
         })
         .padding(.horizontal,20)
-        .navigationTitle("Login")
+        .edgesIgnoringSafeArea(.all)
+//        .navigationTitle("Login")
         .alert(isPresented: $vm.hasError,
                content: {
             if case .failed(let error) = vm.state {

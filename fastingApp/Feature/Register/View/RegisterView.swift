@@ -66,7 +66,7 @@ struct RegisterView: View {
                 }
             }
             .padding(.horizontal,15)
-            .navigationTitle("Register")
+//            .navigationTitle("Register")
             .applyClose()
             .alert(isPresented: $vm.hasError,
                    content: {
