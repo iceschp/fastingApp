@@ -43,7 +43,7 @@ struct MealRecipe: View {
                     }
                     
                     HStack (alignment: .top, spacing: 30) {
-                        Image("food-1")
+                        meal.image
                             .resizable()
                             .frame(width: 150, height: 150)
                             .cornerRadius(20)
