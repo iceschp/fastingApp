@@ -32,7 +32,7 @@ enum FastingPlan: String {
 
 class FastingManager: ObservableObject {
     @Published private(set) var fastingState: FastingState = .notStarted
-    @Published private(set) var fastingPlan: FastingPlan = .beginner
+    @Published private(set) var fastingPlan: FastingPlan = .intermediate
     
     @Published private(set) var startTime: Date {
         didSet {
