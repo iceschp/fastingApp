@@ -24,7 +24,7 @@ struct fastingAppApp: App {
     
     var body: some Scene{
         WindowGroup{
-            NavigationView{
+            NavigationView {
                 switch sessionService.state {
                 case .logedIn:
                     MainHome()
@@ -32,8 +32,8 @@ struct fastingAppApp: App {
                 case .loggedOut:
                     LoginView()
                 }
-                
             }
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }

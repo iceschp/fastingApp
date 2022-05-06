@@ -12,7 +12,7 @@ struct RegisterView: View {
     )
     var body: some View {
         NavigationView {
-            VStack(spacing: 32){
+            VStack(spacing: 32) {
                 VStack{
                     HStack (spacing: 0){
                         RoundedRectangle(cornerRadius: 10)
@@ -65,8 +65,9 @@ struct RegisterView: View {
                     vm.register()
                 }
             }
+            .navigationBarTitleDisplayMode(.inline)
             .padding(.horizontal,15)
-//            .navigationTitle("Register")
+            .navigationTitle("Register")
             .applyClose()
             .alert(isPresented: $vm.hasError,
                    content: {

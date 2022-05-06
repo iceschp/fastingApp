@@ -14,13 +14,11 @@ struct LoginView: View {
         service: LoginServiceImpl()
     )
     var screenWidth = UIScreen.main.bounds.width
-   
+    
     var body: some View {
         
         VStack(spacing: 10) {
-            Text("Login")
-                .font(.title)
-            
+
             HStack (spacing: 0){
                 RoundedRectangle(cornerRadius: 10)
                     .fill(Color("Color1"))
@@ -38,6 +36,7 @@ struct LoginView: View {
                 .padding(.vertical,-200)
                 .padding(30)
             
+
             
             VStack(spacing: 16) {
                 InputTextFieldView(text: $vm.credentials.email,
@@ -49,10 +48,13 @@ struct LoginView: View {
                                   placeholder: "Password",
                                   sfSymbol: "lock")
             }
-            VStack(spacing:20){
+            .padding(.bottom)
+            
+            VStack(spacing:20) {
                 ButtonView(title: "Login"){
                     vm.login()
                 }
+                
                 ButtonView(title: "Register",
                            background: .clear,
                            foreground: .green,
@@ -63,6 +65,7 @@ struct LoginView: View {
                                RegisterView()
                            })
             }
+            
             HStack {
                 Spacer()
                 Button(action: {
@@ -77,7 +80,7 @@ struct LoginView: View {
         })
         .padding(.horizontal,20)
         .edgesIgnoringSafeArea(.all)
-//        .navigationTitle("Login")
+        .navigationTitle("Login")
         .alert(isPresented: $vm.hasError,
                content: {
             if case .failed(let error) = vm.state {

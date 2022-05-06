@@ -132,8 +132,9 @@ struct Header: View {
                     .padding()
                 }
                 
+                Spacer()
             }
-            
+            .navigationBarTitleDisplayMode(.inline)
         }
         .edgesIgnoringSafeArea(.all)
         .frame( maxWidth: .infinity)
